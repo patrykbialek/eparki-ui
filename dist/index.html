@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <title>e-Parki | Lista</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
@@ -22,6 +22,7 @@
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
 
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
@@ -29,79 +30,389 @@
 <body>
 
   <!--// App header start -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light c-app-header">
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/logo_eparki.svg" alt="logo" style="height: 36px;" />
-    </a>
+  <section class="c-app-header">
+    <div class="container">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between u-width-100">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/logo_eparki.svg" alt="logo" style="height: 36px;" />
+          </a>
 
-    <div>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="nav-link__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#616161" width="24px" height="24px">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-              </svg>
-            </i>
-            <span class="nav-link__caption">Regulamin</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="nav-link__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#616161">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c1.03.13 2 .45 2.87.93H13v-.93zM13 7h5.24c.25.31.48.65.68 1H13V7zm0 3h6.74c.08.33.15.66.19 1H13v-1zm0 9.93V19h2.87c-.87.48-1.84.8-2.87.93zM18.24 17H13v-1h5.92c-.2.35-.43.69-.68 1zm1.5-3H13v-1h6.93c-.04.34-.11.67-.19 1z" />
-              </svg>
-            </i>
-            <span class="nav-link__caption">Wersja kontrastowa</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="nav-link__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#616161">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z" />
-              </svg>
-            </i>
-            <span class="nav-link__caption">Wybierz język</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1">
-            <i class="nav-link__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#616161">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
-              </svg>
-            </i>
-            <span class="nav-link__caption">Profil</span>
-          </a>
-        </li>
-      </ul>
+          <div>
+            <ul class="navbar-nav mr-auto1">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="nav-link__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#616161" width="24px"
+                      height="24px">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                    </svg>
+                  </i>
+                  <span class="nav-link__caption">Regulamin</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="nav-link__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#616161">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c1.03.13 2 .45 2.87.93H13v-.93zM13 7h5.24c.25.31.48.65.68 1H13V7zm0 3h6.74c.08.33.15.66.19 1H13v-1zm0 9.93V19h2.87c-.87.48-1.84.8-2.87.93zM18.24 17H13v-1h5.92c-.2.35-.43.69-.68 1zm1.5-3H13v-1h6.93c-.04.34-.11.67-.19 1z" />
+                    </svg>
+                  </i>
+                  <span class="nav-link__caption">Wersja kontrastowa</span></a>
+              </li>
+              <li class="nav-item">
+                <a href class="nav-link" data-toggle="modal" data-target="#basicModal">
+                  <i class="nav-link__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#616161">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z" />
+                    </svg>
+                  </i>
+                  <span class="nav-link__caption">Wybierz język</span>
+                </a>
+              </li>
+              <li class="nav-item border-left">
+                <a class="nav-link" href="#" tabindex="-1">
+                  <i class="nav-link__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#616161">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+                    </svg>
+                  </i>
+                  <span class="nav-link__caption">Profil</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
-  </nav>
+  </section>
+
   <!--// App header end -->
 
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <a href="">
-          <i><img src="assets/img/map-24px.svg" alt="mapa" style="height: 36px;"></i>
-          Rejon Polski (NW)</a>
-        <a href="">Atrakcje parku (8)</a>
-      </div>
-      <div class="col-sm">
-        <button type="button" class="btn btn-outline-secondary">Mapa</button>
-        <button type="button" class="btn btn-outline-secondary">Lista</button>
+  <!--// Park filters -->
+  <div class="c-top-actions">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-6 mb-4 d-flex justify-content-xl-start justify-content-around">
+          <a href="" class="c-menu-button mr-xl-4">
+            <i class="c-menu-button__icon">
+              <img src="assets/img/icons/near_me-24px.svg" alt="rejon Polski">
+            </i>
+            Rejon Polski (NW)
+          </a>
+          <a href="" class="c-menu-button">
+            <i class="c-menu-button__icon">
+              <img src="assets/img/icons/follow_the_signs-24px.svg" alt="atrakcje parku">
+            </i>
+            Atrakcje parku (8)
+          </a>
+        </div>
+        <div class="col-sm-12 col-lg-6 mb-4 d-flex justify-content-xl-end justify-content-center">
+          <button type="button" class="btn btn-outline-secondary col-sm-6 col-xl-3">
+            <i class="c-button__icon mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" />
+              </svg>
+            </i>
+            Mapa
+          </button>
+          <button type="button" class="btn btn-outline-secondary u-active ml-2 col-sm-6 col-xl-3">
+            <i class="c-button__icon mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z" />
+              </svg>
+            </i>
+            Lista
+          </button>
+        </div>
       </div>
     </div>
   </div>
+  <!--// Park filters end -->
+
+  <!--// Park list -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
+        <div class="c-park-item">
+          <div class="d-flex flex-column u-width-100">
+            <div class="d-flex flex-row">
+              <div class="c-park-item__image">
+                <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
+              </div>
+              <div class="d-flex flex-column" style="flex-grow: 1;">
+                <div class="c-park-item__title">Woliński Park Narodowy</div>
+                <div class="c-park-item__attractions">
+                  <span class="c-park-item__attraction ng-star-inserted">
+                    <img src="assets/img/icons/camping.svg" alt="camping"></span>
+                  <span class="c-park-item__attraction ng-star-inserted">
+                    <img src="assets/img/icons/fishing.svg" alt="fishing">
+                  </span>
+                </div>
+                <div class="c-park-item__separator"></div>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+              <div class="c-park-item__actions">
+                <button type="button" class="btn btn-light">Otwórz na mapie</button>
+
+                <button type="button" class="btn btn-outline-primary ml-2">
+                  KUP BILET
+                </button>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+              <div class="c-park-item__footer"></div>
+            </div>
+            <div class="c-park-item__border-bottom"
+              style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
+        <div class="c-park-item">
+          <div class="d-flex flex-column u-width-100">
+            <div class="d-flex flex-row">
+              <div class="c-park-item__image">
+                <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
+              </div>
+              <div class="d-flex flex-column" style="flex-grow: 1;">
+                <div class="c-park-item__title">Woliński Park Narodowy</div>
+                <div class="c-park-item__attractions">
+                  <span class="c-park-item__attraction ng-star-inserted">
+                    <img src="assets/img/icons/camping.svg" alt="camping"></span>
+                  <span class="c-park-item__attraction ng-star-inserted">
+                    <img src="assets/img/icons/fishing.svg" alt="fishing">
+                  </span>
+                </div>
+                <div class="c-park-item__separator"></div>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+              <div class="c-park-item__actions">
+                <button type="button" class="btn btn-light">Otwórz na mapie</button>
+
+                <button type="button" class="btn btn-outline-primary ml-2">
+                  KUP BILET
+                </button>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+              <div class="c-park-item__footer"></div>
+            </div>
+            <div class="c-park-item__border-bottom"
+              style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
+        <div class="c-park-item">
+          <div class="d-flex flex-column u-width-100">
+            <div class="d-flex flex-row">
+              <div class="c-park-item__image">
+                <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
+              </div>
+              <div class="d-flex flex-column" style="flex-grow: 1;">
+                <div class="c-park-item__title">Woliński Park Narodowy</div>
+                <div class="c-park-item__attractions">
+                  <span class="c-park-item__attraction ng-star-inserted">
+                    <img src="assets/img/icons/camping.svg" alt="camping"></span>
+                  <span class="c-park-item__attraction ng-star-inserted">
+                    <img src="assets/img/icons/fishing.svg" alt="fishing">
+                  </span>
+                </div>
+                <div class="c-park-item__separator"></div>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+              <div class="c-park-item__actions">
+                <button type="button" class="btn btn-light">Otwórz na mapie</button>
+
+                <button type="button" class="btn btn-outline-primary ml-2">
+                  KUP BILET
+                </button>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+              <div class="c-park-item__footer"></div>
+            </div>
+            <div class="c-park-item__border-bottom"
+              style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
+        <div class="c-park-item">
+          <div class="d-flex flex-column u-width-100">
+            <div class="d-flex flex-row">
+              <div class="c-park-item__image">
+                <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
+              </div>
+              <div class="d-flex flex-column" style="flex-grow: 1;">
+                <div class="c-park-item__title">Woliński Park Narodowy</div>
+                <div class="c-park-item__attractions">
+                  <span class="c-park-item__attraction ng-star-inserted">
+                    <img src="assets/img/icons/camping.svg" alt="camping"></span>
+                  <span class="c-park-item__attraction ng-star-inserted">
+                    <img src="assets/img/icons/fishing.svg" alt="fishing">
+                  </span>
+                </div>
+                <div class="c-park-item__separator"></div>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+              <div class="c-park-item__actions">
+                <button type="button" class="btn btn-light">Otwórz na mapie</button>
+
+                <button type="button" class="btn btn-outline-primary ml-2">
+                  KUP BILET
+                </button>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+              <div class="c-park-item__footer"></div>
+            </div>
+            <div class="c-park-item__border-bottom"
+              style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
+        <div class="c-park-item">
+          <div class="d-flex flex-column u-width-100">
+            <div class="d-flex flex-row">
+              <div class="c-park-item__image">
+                <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
+              </div>
+              <div class="d-flex flex-column" style="flex-grow: 1;">
+                <div class="c-park-item__title">Woliński Park Narodowy</div>
+                <div class="c-park-item__attractions">
+                  <span class="c-park-item__attraction ng-star-inserted">
+                    <img src="assets/img/icons/camping.svg" alt="camping"></span>
+                  <span class="c-park-item__attraction ng-star-inserted">
+                    <img src="assets/img/icons/fishing.svg" alt="fishing">
+                  </span>
+                </div>
+                <div class="c-park-item__separator"></div>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+              <div class="c-park-item__actions">
+                <button type="button" class="btn btn-light">Otwórz na mapie</button>
+
+                <button type="button" class="btn btn-outline-primary ml-2">
+                  KUP BILET
+                </button>
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+              <div class="c-park-item__footer"></div>
+            </div>
+            <div class="c-park-item__border-bottom"
+              style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--// Park list end -->
+
+  <!-- basic modal -->
+  <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Ustawienie języka</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px" height="24px">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="list-group list-group-flush">
+            <a href class="list-group-item list-group-item-action is-active"  data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M0 0h24v24H0V0z" fill="none" />
+                      <path
+                        d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
+                        fill="#000000de" />
+                    </svg>
+                  </i>
+                  Język przeglądarki
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action"  data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon"> PL </i>
+                  Polski
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action"  data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon"> EN </i>
+                  Angielski
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action"  data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon"> DE </i>
+                  Niemiecki
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <script src="main.bundle.js" async></script></body>
 
 </html>

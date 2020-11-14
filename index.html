@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <title>e-Parki | Lista</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
@@ -37,13 +37,14 @@
           <a class="navbar-brand" href="#">
             <img src="assets/img/logo_eparki.svg" alt="logo" style="height: 36px;" />
           </a>
-  
+
           <div>
             <ul class="navbar-nav mr-auto1">
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <i class="nav-link__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#616161" width="24px" height="24px">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#616161" width="24px"
+                      height="24px">
                       <path d="M0 0h24v24H0z" fill="none" />
                       <path
                         d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
@@ -63,7 +64,7 @@
                   <span class="nav-link__caption">Wersja kontrastowa</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a href class="nav-link" data-toggle="modal" data-target="#basicModal">
                   <i class="nav-link__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#616161">
                       <path d="M0 0h24v24H0z" fill="none" />
@@ -115,7 +116,7 @@
           </a>
         </div>
         <div class="col-sm-12 col-lg-6 mb-4 d-flex justify-content-xl-end justify-content-center">
-          <a href="mapa.html" type="button" class="btn btn-outline-secondary col-sm-6 col-xl-3">
+          <button type="button" class="btn btn-outline-secondary col-sm-6 col-xl-3">
             <i class="c-button__icon mr-2">
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                 <path d="M0 0h24v24H0z" fill="none" />
@@ -124,8 +125,8 @@
               </svg>
             </i>
             Mapa
-          </a>
-          <a href="lista.html" type="button" class="btn btn-outline-secondary u-active ml-2 col-sm-6 col-xl-3">
+          </button>
+          <button type="button" class="btn btn-outline-secondary u-active ml-2 col-sm-6 col-xl-3">
             <i class="c-button__icon mr-2">
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                 <path d="M0 0h24v24H0z" fill="none" />
@@ -133,14 +134,14 @@
               </svg>
             </i>
             Lista
-          </a>
+          </button>
         </div>
       </div>
     </div>
   </div>
   <!--// Park filters end -->
 
-
+  <!--// Park list -->
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
@@ -329,6 +330,86 @@
         </div>
       </div>
 
+    </div>
+  </div>
+  <!--// Park list end -->
+
+  <!-- basic modal -->
+  <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Ustawienie języka</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px" height="24px">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="list-group list-group-flush">
+            <a href class="list-group-item list-group-item-action is-active"  data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M0 0h24v24H0V0z" fill="none" />
+                      <path
+                        d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
+                        fill="#000000de" />
+                    </svg>
+                  </i>
+                  Język przeglądarki
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action"  data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon"> PL </i>
+                  Polski
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action"  data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon"> EN </i>
+                  Angielski
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action"  data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon"> DE </i>
+                  Niemiecki
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

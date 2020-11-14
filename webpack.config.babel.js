@@ -6,10 +6,10 @@ import ScriptExtHtmlWebpackPlugin from "script-ext-html-webpack-plugin";
 export default {
   entry: [
     path.join(__dirname, "src/index.js"),
-    path.join(__dirname + '/src/scss/app.scss'),
+    path.join(__dirname + "/assets/scss/styles.scss"),
   ],
   output: {
-      ]    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "dist"),
     filename: "[name].bundle.js",
   },
   module: {
@@ -37,7 +37,7 @@ export default {
         use: [
           {
             loader: "file-loader",
-            options: { outputPath: "css/", name: "[name].min.css" },
+            options: { outputPath: "assets/css/", name: "[name].css" },
           },
           "sass-loader",
         ],
