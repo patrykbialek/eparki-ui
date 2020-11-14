@@ -262,6 +262,8 @@ html {
   width: 36px;
   margin-right: 16px !important;
   font-style: normal; }
+  .list-group-item__icon img {
+    width: 22px !important; }
 
 .list-group-item {
   padding: 12px 0; }
@@ -385,3 +387,26 @@ html {
   font-style: italic;
   vertical-align: middle;
   width: 1140px; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #537e37;
+  border-color: #537e37; }
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #537e37 !important;
+    border-color: #537e37 !important; }
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 376px; } }
+
+@media (max-width: 575px) {
+  .modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+  .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0; } }
