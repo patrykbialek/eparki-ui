@@ -64,7 +64,7 @@
                   <span class="nav-link__caption">Wersja kontrastowa</span></a>
               </li>
               <li class="nav-item">
-                <a href class="nav-link" data-toggle="modal" data-target="#basicModal">
+                <a href class="nav-link" data-toggle="modal" data-target="#languageModal">
                   <i class="nav-link__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#616161">
                       <path d="M0 0h24v24H0z" fill="none" />
@@ -108,7 +108,7 @@
             </i>
             Rejon Polski (NW)
           </a>
-          <a href="" class="c-menu-button">
+          <a href="" class="c-menu-button" data-toggle="modal" data-target="#featureModal">
             <i class="c-menu-button__icon">
               <img src="assets/img/icons/follow_the_signs-24px.svg" alt="atrakcje parku">
             </i>
@@ -334,8 +334,9 @@
   </div>
   <!--// Park list end -->
 
-  <!-- basic modal -->
-  <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <!--// Select language modal -->
+  <div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="languageModal"
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -352,7 +353,7 @@
         </div>
         <div class="modal-body">
           <div class="list-group list-group-flush">
-            <a href class="list-group-item list-group-item-action is-active"  data-dismiss="modal">
+            <a href class="list-group-item list-group-item-action is-active" data-dismiss="modal">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   <i class="list-group-item__icon">
@@ -366,43 +367,43 @@
                   Język przeglądarki
                 </div>
                 <div>
-                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_checked-24px.svg" alt="" class="is-checked-item">
                   <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
                 </div>
               </div>
             </a>
-            <a href class="list-group-item list-group-item-action"  data-dismiss="modal">
+            <a href class="list-group-item list-group-item-action" data-dismiss="modal">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   <i class="list-group-item__icon"> PL </i>
                   Polski
                 </div>
                 <div>
-                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_checked-24px.svg" alt="" class="is-checked-item">
                   <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
                 </div>
               </div>
             </a>
-            <a href class="list-group-item list-group-item-action"  data-dismiss="modal">
+            <a href class="list-group-item list-group-item-action" data-dismiss="modal">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   <i class="list-group-item__icon"> EN </i>
                   Angielski
                 </div>
                 <div>
-                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_checked-24px.svg" alt="" class="is-checked-item">
                   <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
                 </div>
               </div>
             </a>
-            <a href class="list-group-item list-group-item-action"  data-dismiss="modal">
+            <a href class="list-group-item list-group-item-action" data-dismiss="modal">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   <i class="list-group-item__icon"> DE </i>
                   Niemiecki
                 </div>
                 <div>
-                  <img src="assets/img/icons/check_circle_outline-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_checked-24px.svg" alt="" class="is-checked-item">
                   <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
                 </div>
               </div>
@@ -412,6 +413,170 @@
       </div>
     </div>
   </div>
+  <!--// Select language modal end -->
+
+
+  <!--// Select park feature modal -->
+  <div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Filtry - Atrakcje parku</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px" height="24px">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body" style="height: 50vh; overflow: auto;">
+          <div class="list-group list-group-flush">
+            <a href class="list-group-item list-group-item-action is-active" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"
+                        fill="#000000de" />
+                    </svg>
+                  </i>
+                  Wszystkie atrakcje (8)
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_box-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/check_box_outline_blank-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="assets/img/icons/camping.svg" alt="Biwakowanie">
+                  </i>
+                  Biwakowanie
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_box-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/check_box_outline_blank-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="assets/img/icons/photo.svg" alt="Fotografowanie (sesja zdjęciowa)">
+                  </i>
+                  Fotografowanie (sesja zdjęciowa)
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_box-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/check_box_outline_blank-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="assets/img/icons/museum.svg" alt="Muzeum parku">
+                  </i>
+                  Muzeum parku
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_box-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/check_box_outline_blank-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="assets/img/icons/kayak.svg" alt="Spływy kajakowe">
+                  </i>
+                  Spływy kajakowe
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_box-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/check_box_outline_blank-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="assets/img/icons/river.svg" alt="Szlaki wodne">
+                  </i>
+                  Szlaki wodne
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_box-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/check_box_outline_blank-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="assets/img/icons/river_road.svg" alt="Ścieżki przyrodnicze">
+                  </i>
+                  Ścieżki przyrodnicze
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_box-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/check_box_outline_blank-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="assets/img/icons/fishing.svg" alt="Wędkowanie">
+                  </i>
+                  Wędkowanie
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_box-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/check_box_outline_blank-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="assets/img/icons/salling.svg" alt="Żeglowanie">
+                  </i>
+                  Żeglowanie
+                </div>
+                <div>
+                  <img src="assets/img/icons/check_box-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/check_box_outline_blank-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">
+            Potwierdź wybór (8)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Select park feature modal end -->
 
 <script src="main.bundle.js" async></script></body>
 

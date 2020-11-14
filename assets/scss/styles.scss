@@ -310,6 +310,10 @@ html {
   width: 36px;
   margin-right: 16px !important;
   font-style: normal;
+
+  img {
+    width: 22px !important;
+  }
 }
 
 .list-group-item {
@@ -352,3 +356,36 @@ html {
 }
 
 @import "./map.scss";
+
+.btn-primary {
+  color: #fff;
+  background-color: #537e37;
+  border-color: #537e37;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: #537e37 !important;
+    border-color: #537e37 !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 376px;
+  }
+}
+
+@media (max-width: 575px) {
+  .modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+  }
+}
