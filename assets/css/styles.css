@@ -1,6 +1,6 @@
 body,
 html {
-  font-family: Lato, sans-serif;
+  font-family: Lato, sans-serif !important;
   background-color: #fafafa;
   color: #616161;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +19,9 @@ html {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
   height: 72px;
 }
+.c-app-header .row {
+  height: 100%;
+}
 
 .c-app-header .nav-link__icon,
 .c-app-header .nav-link__caption {
@@ -30,7 +33,7 @@ html {
 }
 
 .c-app-header .nav-link__icon {
-  margin-right: 12px !important;
+  margin-right: 0;
 }
 
 .c-app-header .nav-link__caption {
@@ -85,7 +88,194 @@ html {
   height: 48px;
 }
 
-@media (min-width: 780px) {
+.c-top-actions .c-menu-button__icon {
+  display: none;
+}
+
+.c-button__icon {
+  width: 24px;
+}
+
+.c-menu-button {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+  border-radius: 42px;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #616161;
+  font-size: 14px;
+  transition: opacity 200ms cubic-bezier(0.35, 0, 0.25, 1), background-color 200ms cubic-bezier(0.35, 0, 0.25, 1);
+}
+.c-menu-button:hover {
+  text-decoration: none;
+  color: #616161;
+  background: #eeeeee;
+}
+
+.c-menu-button__icon {
+  width: 36px !important;
+  height: 36px !important;
+  background-color: #eee;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.c-top-actions {
+  padding: 24px 0;
+}
+
+.btn {
+  font-size: 14px;
+}
+.btn-outline-secondary {
+  color: #616161;
+  border-color: rgba(0, 0, 0, 0.12);
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-outline-secondary:hover {
+  text-decoration: none;
+  color: #616161;
+  background: #eeeeee;
+}
+
+.u-active.btn {
+  color: #537e37;
+}
+
+.btn .c-button__icon svg {
+  fill: #616161;
+}
+
+.u-active.btn .c-button__icon svg {
+  fill: #537e37;
+}
+
+/* Park item */
+.c-park-item {
+  padding: 0 12px 0 0 !important;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fff;
+}
+
+.c-park-item__image {
+  width: 72px;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  padding-top: 32px;
+}
+
+.c-park-item__image img {
+  width: 48px;
+}
+
+.c-park-item__title {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-flex;
+  height: 56px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.c-park-item__attractions {
+  display: inline-flex;
+  align-items: center;
+  height: 52px;
+}
+.c-park-item__attraction img {
+  width: 18px !important;
+}
+
+.c-park-item__attraction {
+  background-color: #eee;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+
+.c-park-item__separator {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.c-park-item__actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 52px;
+}
+
+.c-park-item__footer {
+  height: 4px;
+}
+
+.c-park-item__border-bottom {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.c-park-item:hover {
+  box-shadow: 0 2px 3px -1px rgba(128, 103, 103, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.u-width-100 {
+  width: 100%;
+}
+
+.btn-outline-primary {
+  color: #537e37;
+  border-color: #537e37;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #537e37;
+  border-color: #537e37;
+}
+
+@media (min-width: 990px) {
   .c-app-header .nav-link__caption {
     display: inline-block !important;
   }
@@ -94,4 +284,13 @@ html {
     padding: 0.5rem 18px;
     font-size: 14px;
   }
+
+  .c-app-header .nav-link__icon {
+    margin-right: 12px !important;
+  }
+
+  .c-top-actions .c-menu-button__icon {
+    display: flex;
+  }
 }
+
