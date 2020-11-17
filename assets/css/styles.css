@@ -124,10 +124,13 @@ html {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-right: 12px; }
+  margin-right: 12px;
+  margin-left: -16px; }
 
 .c-top-actions {
-  padding: 24px 0; }
+  padding: 24px 0 0 0; }
+  .c-top-actions .nav button {
+    width: 45%; }
 
 .btn {
   font-size: 14px; }
@@ -149,7 +152,7 @@ html {
 .btn .c-button__icon svg {
   fill: #616161; }
 
-.u-active.btn .c-button__icon svg {
+.active.btn .c-button__icon svg {
   fill: #537e37; }
 
 /* Park item */
@@ -236,6 +239,15 @@ html {
   background-color: #537e37;
   border-color: #537e37; }
 
+.nav {
+  padding-left: 15px; }
+
+.nav-link {
+  transition: all 0.3s ease-in-out; }
+  .nav-link:hover {
+    background-color: #eeeeee;
+    border-radius: 4px; }
+
 @media (min-width: 990px) {
   .c-app-header .nav-link__caption {
     display: inline-block !important; }
@@ -245,7 +257,11 @@ html {
   .c-app-header .nav-link__icon {
     margin-right: 12px !important; }
   .c-top-actions .c-menu-button__icon {
-    display: flex; } }
+    display: flex; }
+  .c-top-actions {
+    padding: 24px 0 0 0; }
+    .c-top-actions .nav button {
+      width: 25%; } }
 
 .list-group-item {
   display: flex;
@@ -395,6 +411,11 @@ html {
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
     background-color: #537e37 !important;
     border-color: #537e37 !important; }
+
+.btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show > .btn-outline-secondary.dropdown-toggle {
+  color: #537e37;
+  background-color: #fafafa;
+  border-color: #537e37; }
 
 @media (min-width: 576px) {
   .modal-dialog {
