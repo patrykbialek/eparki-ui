@@ -143,10 +143,15 @@ html {
   justify-content: center;
   align-items: center;
   margin-right: 12px;
+  margin-left: -16px;
 }
 
 .c-top-actions {
-  padding: 24px 0;
+  padding: 24px 0 0 0;
+
+  .nav button {
+    width: 45%;
+  }
 }
 
 .btn {
@@ -173,7 +178,7 @@ html {
   fill: #616161;
 }
 
-.u-active.btn .c-button__icon svg {
+.active.btn .c-button__icon svg {
   fill: #537e37;
 }
 
@@ -275,6 +280,19 @@ html {
   border-color: #537e37;
 }
 
+.nav {
+  padding-left: 15px;
+}
+
+.nav-link {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #eeeeee;
+    border-radius: 4px;
+  }
+}
+
 @media (min-width: 990px) {
   .c-app-header .nav-link__caption {
     display: inline-block !important;
@@ -291,6 +309,14 @@ html {
 
   .c-top-actions .c-menu-button__icon {
     display: flex;
+  }
+
+  .c-top-actions {
+    padding: 24px 0 0 0;
+  
+    .nav button {
+      width: 25%;
+    }
   }
 }
 
@@ -367,6 +393,12 @@ html {
     background-color: #537e37 !important;
     border-color: #537e37 !important;
   }
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show>.btn-outline-secondary.dropdown-toggle {
+  color: #537e37;
+  background-color: #fafafa;
+  border-color: #537e37;
 }
 
 @media (min-width: 576px) {

@@ -102,7 +102,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-lg-6 mb-4 d-flex justify-content-xl-start justify-content-around">
-          <a href="" class="c-menu-button mr-xl-4">
+          <a href="" class="c-menu-button mr-xl-4" data-toggle="modal" data-target="#regionModal">
             <i class="c-menu-button__icon">
               <img src="assets/img/icons/near_me-24px.svg" alt="rejon Polski">
             </i>
@@ -115,8 +115,10 @@
             Atrakcje parku (8)
           </a>
         </div>
-        <div class="col-sm-12 col-lg-6 mb-4 d-flex justify-content-xl-end justify-content-center">
-          <button type="button" class="btn btn-outline-secondary col-sm-6 col-xl-3">
+        <div id="viewTabs" role="tablist"
+          class="nav col-sm-12 col-lg-6 mb-4 d-flex justify-content-xl-end justify-content-around">
+          <button type="button" class="btn btn-outline-secondary mr-1 active" id="map-tab" data-toggle="tab" href="#map"
+            role="tab" aria-controls="map" aria-selected="true">
             <i class="c-button__icon mr-2">
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                 <path d="M0 0h24v24H0z" fill="none" />
@@ -126,7 +128,8 @@
             </i>
             Mapa
           </button>
-          <button type="button" class="btn btn-outline-secondary u-active ml-2 col-sm-6 col-xl-3">
+          <button type="button" class="btn btn-outline-secondary ml-1" id="list-tab" data-toggle="tab" href="#list"
+            role="tab" aria-controls="list" aria-selected="false">
             <i class="c-button__icon mr-2">
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                 <path d="M0 0h24v24H0z" fill="none" />
@@ -141,198 +144,302 @@
   </div>
   <!--// Park filters end -->
 
-  <!--// Park list -->
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
-        <div class="c-park-item">
-          <div class="d-flex flex-column u-width-100">
-            <div class="d-flex flex-row">
-              <div class="c-park-item__image">
-                <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-              </div>
-              <div class="d-flex flex-column" style="flex-grow: 1;">
-                <div class="c-park-item__title">Woliński Park Narodowy</div>
-                <div class="c-park-item__attractions">
-                  <span class="c-park-item__attraction ng-star-inserted">
-                    <img src="assets/img/icons/camping.svg" alt="camping"></span>
-                  <span class="c-park-item__attraction ng-star-inserted">
-                    <img src="assets/img/icons/fishing.svg" alt="fishing">
-                  </span>
-                </div>
-                <div class="c-park-item__separator"></div>
-              </div>
-            </div>
-            <div class="d-flex flex-row justify-content-end">
-              <div class="c-park-item__actions">
-                <button type="button" class="btn btn-light">Otwórz na mapie</button>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="map" role="tabpanel" aria-labelledby="map-tab">
 
-                <button type="button" class="btn btn-outline-primary ml-2">
-                  KUP BILET
-                </button>
+      <!--// Park map -->
+      <div class="container">
+        <div class="row">
+          <div class="c-map">
+            <img src="assets/img/map.png" width="100%" alt="">
+
+            <div class="c-park-pin" style="top: 94px; left: 167px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
               </div>
             </div>
-            <div class="d-flex flex-row justify-content-end">
-              <div class="c-park-item__footer"></div>
+
+            <div class="c-park-pin" style="top: 2px; left: 391px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_slowinski.png"
+                  alt="Słowiński Park Narodowy">
+              </div>
             </div>
-            <div class="c-park-item__border-bottom"
-              style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+
+            <div class="c-park-pin" style="top: 66px; left: 844px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_wigierski.png"
+                  alt="Wigierski Park Narodowy">
+              </div>
+            </div>
+
+            <div class="c-park-pin" style="top: 116px; left: 814px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_biebrzanski.png"
+                  alt="Biebrzański Park Narodowy"></div>
+            </div>
+
+            <div class="c-park-pin" style="top: 150px; left: 250px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_drawienski.png"
+                  alt="Drawieński Park Narodowy">
+              </div>
+            </div>
+
+            <div class="c-park-pin" style="top: 174px; left: 838px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_narwianski.png"
+                  alt="Narwiański Park Narodowy">
+              </div>
+            </div>
+
+            <div class="c-park-pin" style="top: 261px; left: 351px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_wielkopolski.png"
+                  alt="Wielkopolski Park Narodowy"></div>
+            </div>
+
+            <div class="c-park-pin" style="top: 489px; left: 251px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_karkonoski.png"
+                  alt="Karkonoski Park Narodowy">
+              </div>
+            </div>
+
+            <div class="c-park-pin" style="top: 562px; left: 342px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_gorystolowe.png"
+                  alt="Park Narodowy Gór Stołowych"></div>
+            </div>
+
+            <div class="c-park-pin" style="top: 455px; left: 861px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_poleski.png" alt="Poleski Park Narodowy">
+              </div>
+            </div>
+
+            <div class="c-park-pin" style="top: 550px; left: 861px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_roztoczanski.png"
+                  alt="Roztoczański Park Narodowy"></div>
+            </div>
+
+            <div class="c-park-pin" style="top: 647px; left: 575px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_babiogorski.png"
+                  alt="Babiogórski Park Narodowy"></div>
+            </div>
+
+            <div class="c-park-pin" style="top: 684px; left: 619px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_gorczanski.png"
+                  alt="Gorczański Park Narodowy">
+              </div>
+            </div>
+
+            <div class="c-park-pin" style="top: 650px; left: 750px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_magurski.png" alt="Magurski Park Narodowy">
+              </div>
+            </div>
+
+            <div class="c-park-pin" style="top: 715px; left: 861px;">
+              <div class="c-park-pin__image"><img src="assets/img/logo/logo_bieszczadzki.png"
+                  alt="Bieszczadzki Park Narodowy"></div>
             </div>
           </div>
+
         </div>
       </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
-        <div class="c-park-item">
-          <div class="d-flex flex-column u-width-100">
-            <div class="d-flex flex-row">
-              <div class="c-park-item__image">
-                <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-              </div>
-              <div class="d-flex flex-column" style="flex-grow: 1;">
-                <div class="c-park-item__title">Woliński Park Narodowy</div>
-                <div class="c-park-item__attractions">
-                  <span class="c-park-item__attraction ng-star-inserted">
-                    <img src="assets/img/icons/camping.svg" alt="camping"></span>
-                  <span class="c-park-item__attraction ng-star-inserted">
-                    <img src="assets/img/icons/fishing.svg" alt="fishing">
-                  </span>
-                </div>
-                <div class="c-park-item__separator"></div>
-              </div>
-            </div>
-            <div class="d-flex flex-row justify-content-end">
-              <div class="c-park-item__actions">
-                <button type="button" class="btn btn-light">Otwórz na mapie</button>
+      <!--// Park map end -->
 
-                <button type="button" class="btn btn-outline-primary ml-2">
-                  KUP BILET
-                </button>
+    </div>
+
+    <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
+
+      <!--// Park list -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
+            <div class="c-park-item">
+              <div class="d-flex flex-column u-width-100">
+                <div class="d-flex flex-row">
+                  <div class="c-park-item__image">
+                    <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
+                  </div>
+                  <div class="d-flex flex-column" style="flex-grow: 1;">
+                    <div class="c-park-item__title">Woliński Park Narodowy</div>
+                    <div class="c-park-item__attractions">
+                      <span class="c-park-item__attraction ng-star-inserted">
+                        <img src="assets/img/icons/camping.svg" alt="camping"></span>
+                      <span class="c-park-item__attraction ng-star-inserted">
+                        <img src="assets/img/icons/fishing.svg" alt="fishing">
+                      </span>
+                    </div>
+                    <div class="c-park-item__separator"></div>
+                  </div>
+                </div>
+                <div class="d-flex flex-row justify-content-end">
+                  <div class="c-park-item__actions">
+                    <button type="button" class="btn btn-light">Otwórz na mapie</button>
+
+                    <button type="button" class="btn btn-outline-primary ml-2">
+                      KUP BILET
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex flex-row justify-content-end">
+                  <div class="c-park-item__footer"></div>
+                </div>
+                <div class="c-park-item__border-bottom"
+                  style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+                </div>
               </div>
-            </div>
-            <div class="d-flex flex-row justify-content-end">
-              <div class="c-park-item__footer"></div>
-            </div>
-            <div class="c-park-item__border-bottom"
-              style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
-        <div class="c-park-item">
-          <div class="d-flex flex-column u-width-100">
-            <div class="d-flex flex-row">
-              <div class="c-park-item__image">
-                <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-              </div>
-              <div class="d-flex flex-column" style="flex-grow: 1;">
-                <div class="c-park-item__title">Woliński Park Narodowy</div>
-                <div class="c-park-item__attractions">
-                  <span class="c-park-item__attraction ng-star-inserted">
-                    <img src="assets/img/icons/camping.svg" alt="camping"></span>
-                  <span class="c-park-item__attraction ng-star-inserted">
-                    <img src="assets/img/icons/fishing.svg" alt="fishing">
-                  </span>
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
+            <div class="c-park-item">
+              <div class="d-flex flex-column u-width-100">
+                <div class="d-flex flex-row">
+                  <div class="c-park-item__image">
+                    <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
+                  </div>
+                  <div class="d-flex flex-column" style="flex-grow: 1;">
+                    <div class="c-park-item__title">Woliński Park Narodowy</div>
+                    <div class="c-park-item__attractions">
+                      <span class="c-park-item__attraction ng-star-inserted">
+                        <img src="assets/img/icons/camping.svg" alt="camping"></span>
+                      <span class="c-park-item__attraction ng-star-inserted">
+                        <img src="assets/img/icons/fishing.svg" alt="fishing">
+                      </span>
+                    </div>
+                    <div class="c-park-item__separator"></div>
+                  </div>
                 </div>
-                <div class="c-park-item__separator"></div>
-              </div>
-            </div>
-            <div class="d-flex flex-row justify-content-end">
-              <div class="c-park-item__actions">
-                <button type="button" class="btn btn-light">Otwórz na mapie</button>
+                <div class="d-flex flex-row justify-content-end">
+                  <div class="c-park-item__actions">
+                    <button type="button" class="btn btn-light">Otwórz na mapie</button>
 
-                <button type="button" class="btn btn-outline-primary ml-2">
-                  KUP BILET
-                </button>
+                    <button type="button" class="btn btn-outline-primary ml-2">
+                      KUP BILET
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex flex-row justify-content-end">
+                  <div class="c-park-item__footer"></div>
+                </div>
+                <div class="c-park-item__border-bottom"
+                  style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+                </div>
               </div>
-            </div>
-            <div class="d-flex flex-row justify-content-end">
-              <div class="c-park-item__footer"></div>
-            </div>
-            <div class="c-park-item__border-bottom"
-              style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
-        <div class="c-park-item">
-          <div class="d-flex flex-column u-width-100">
-            <div class="d-flex flex-row">
-              <div class="c-park-item__image">
-                <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-              </div>
-              <div class="d-flex flex-column" style="flex-grow: 1;">
-                <div class="c-park-item__title">Woliński Park Narodowy</div>
-                <div class="c-park-item__attractions">
-                  <span class="c-park-item__attraction ng-star-inserted">
-                    <img src="assets/img/icons/camping.svg" alt="camping"></span>
-                  <span class="c-park-item__attraction ng-star-inserted">
-                    <img src="assets/img/icons/fishing.svg" alt="fishing">
-                  </span>
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
+            <div class="c-park-item">
+              <div class="d-flex flex-column u-width-100">
+                <div class="d-flex flex-row">
+                  <div class="c-park-item__image">
+                    <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
+                  </div>
+                  <div class="d-flex flex-column" style="flex-grow: 1;">
+                    <div class="c-park-item__title">Woliński Park Narodowy</div>
+                    <div class="c-park-item__attractions">
+                      <span class="c-park-item__attraction ng-star-inserted">
+                        <img src="assets/img/icons/camping.svg" alt="camping"></span>
+                      <span class="c-park-item__attraction ng-star-inserted">
+                        <img src="assets/img/icons/fishing.svg" alt="fishing">
+                      </span>
+                    </div>
+                    <div class="c-park-item__separator"></div>
+                  </div>
                 </div>
-                <div class="c-park-item__separator"></div>
-              </div>
-            </div>
-            <div class="d-flex flex-row justify-content-end">
-              <div class="c-park-item__actions">
-                <button type="button" class="btn btn-light">Otwórz na mapie</button>
+                <div class="d-flex flex-row justify-content-end">
+                  <div class="c-park-item__actions">
+                    <button type="button" class="btn btn-light">Otwórz na mapie</button>
 
-                <button type="button" class="btn btn-outline-primary ml-2">
-                  KUP BILET
-                </button>
+                    <button type="button" class="btn btn-outline-primary ml-2">
+                      KUP BILET
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex flex-row justify-content-end">
+                  <div class="c-park-item__footer"></div>
+                </div>
+                <div class="c-park-item__border-bottom"
+                  style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+                </div>
               </div>
-            </div>
-            <div class="d-flex flex-row justify-content-end">
-              <div class="c-park-item__footer"></div>
-            </div>
-            <div class="c-park-item__border-bottom"
-              style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
-        <div class="c-park-item">
-          <div class="d-flex flex-column u-width-100">
-            <div class="d-flex flex-row">
-              <div class="c-park-item__image">
-                <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-              </div>
-              <div class="d-flex flex-column" style="flex-grow: 1;">
-                <div class="c-park-item__title">Woliński Park Narodowy</div>
-                <div class="c-park-item__attractions">
-                  <span class="c-park-item__attraction ng-star-inserted">
-                    <img src="assets/img/icons/camping.svg" alt="camping"></span>
-                  <span class="c-park-item__attraction ng-star-inserted">
-                    <img src="assets/img/icons/fishing.svg" alt="fishing">
-                  </span>
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
+            <div class="c-park-item">
+              <div class="d-flex flex-column u-width-100">
+                <div class="d-flex flex-row">
+                  <div class="c-park-item__image">
+                    <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
+                  </div>
+                  <div class="d-flex flex-column" style="flex-grow: 1;">
+                    <div class="c-park-item__title">Woliński Park Narodowy</div>
+                    <div class="c-park-item__attractions">
+                      <span class="c-park-item__attraction ng-star-inserted">
+                        <img src="assets/img/icons/camping.svg" alt="camping"></span>
+                      <span class="c-park-item__attraction ng-star-inserted">
+                        <img src="assets/img/icons/fishing.svg" alt="fishing">
+                      </span>
+                    </div>
+                    <div class="c-park-item__separator"></div>
+                  </div>
                 </div>
-                <div class="c-park-item__separator"></div>
-              </div>
-            </div>
-            <div class="d-flex flex-row justify-content-end">
-              <div class="c-park-item__actions">
-                <button type="button" class="btn btn-light">Otwórz na mapie</button>
+                <div class="d-flex flex-row justify-content-end">
+                  <div class="c-park-item__actions">
+                    <button type="button" class="btn btn-light">Otwórz na mapie</button>
 
-                <button type="button" class="btn btn-outline-primary ml-2">
-                  KUP BILET
-                </button>
+                    <button type="button" class="btn btn-outline-primary ml-2">
+                      KUP BILET
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex flex-row justify-content-end">
+                  <div class="c-park-item__footer"></div>
+                </div>
+                <div class="c-park-item__border-bottom"
+                  style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+                </div>
               </div>
-            </div>
-            <div class="d-flex flex-row justify-content-end">
-              <div class="c-park-item__footer"></div>
-            </div>
-            <div class="c-park-item__border-bottom"
-              style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
             </div>
           </div>
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
+            <div class="c-park-item">
+              <div class="d-flex flex-column u-width-100">
+                <div class="d-flex flex-row">
+                  <div class="c-park-item__image">
+                    <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
+                  </div>
+                  <div class="d-flex flex-column" style="flex-grow: 1;">
+                    <div class="c-park-item__title">Woliński Park Narodowy</div>
+                    <div class="c-park-item__attractions">
+                      <span class="c-park-item__attraction ng-star-inserted">
+                        <img src="assets/img/icons/camping.svg" alt="camping"></span>
+                      <span class="c-park-item__attraction ng-star-inserted">
+                        <img src="assets/img/icons/fishing.svg" alt="fishing">
+                      </span>
+                    </div>
+                    <div class="c-park-item__separator"></div>
+                  </div>
+                </div>
+                <div class="d-flex flex-row justify-content-end">
+                  <div class="c-park-item__actions">
+                    <button type="button" class="btn btn-light">Otwórz na mapie</button>
+
+                    <button type="button" class="btn btn-outline-primary ml-2">
+                      KUP BILET
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex flex-row justify-content-end">
+                  <div class="c-park-item__footer"></div>
+                </div>
+                <div class="c-park-item__border-bottom"
+                  style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+      <!--// Park list end -->
 
     </div>
   </div>
-  <!--// Park list end -->
+
 
   <!--// Select language modal -->
   <div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="languageModal"
@@ -422,7 +529,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel">Filtry - Atrakcje parku</h4>
+          <h4 class="modal-title" id="parkFeatures">Filtry - Atrakcje parku</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px" height="24px">
@@ -577,6 +684,127 @@
     </div>
   </div>
   <!--// Select park feature modal end -->
+
+  <!--// Select country region modal -->
+  <div class="modal fade" id="regionModal" tabindex="-1" role="dialog" aria-labelledby="regionModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="countryRegion">Filtry - Rejon Polski</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px" height="24px">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="list-group list-group-flush">
+            <a href class="list-group-item list-group-item-action">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"
+                        fill="#000000de" />
+                    </svg>
+                  </i>
+                  Cała Polska
+                </div>
+                <div>
+                  <img src="assets/img/icons/radio_button_checked-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action is-active border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                      viewBox="0 0 24 24" width="24">
+                      <rect fill="none" height="24" width="24" />
+                      <path d="M5,15h2V8.41L18.59,20L20,18.59L8.41,7H15V5H5V15z" fill="#000000de"/>
+                    </svg>
+                  </i>
+                  Północny zachód (NW)
+                </div>
+                <div>
+                  <img src="assets/img/icons/radio_button_checked-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                      viewBox="0 0 24 24" width="24">
+                      <rect fill="none" height="24" width="24" />
+                      <path d="M9,5v2h6.59L4,18.59L5.41,20L17,8.41V15h2V5H9z" fill="#000000de"/>
+                    </svg>
+                  </i>
+                  Północny wschód (NE)
+                </div>
+                <div>
+                  <img src="assets/img/icons/radio_button_checked-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                      viewBox="0 0 24 24" width="24">
+                      <rect fill="none" height="24" width="24" />
+                      <path d="M19,9h-2v6.59L5.41,4L4,5.41L15.59,17H9v2h10V9z" fill="#000000de"/>
+                    </svg>
+                  </i>
+                  Południowy wschód (SE)
+                </div>
+                <div>
+                  <img src="assets/img/icons/radio_button_checked-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                      viewBox="0 0 24 24" width="24">
+                      <rect fill="none" height="24" width="24" />
+                      <path d="M15,19v-2H8.41L20,5.41L18.59,4L7,15.59V9H5v10H15z" fill="#000000de" />
+                    </svg>
+                  </i>
+                  Południowy zachód (SW)
+                </div>
+                <div>
+                  <img src="assets/img/icons/radio_button_checked-24px.svg" alt="" class="is-checked-item">
+                  <img src="assets/img/icons/radio_button_unchecked-24px.svg" alt="" class="is-unchecked-item">
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">
+            Potwierdź wybór
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Select language modal end -->
 
 <script src="main.bundle.js" async></script></body>
 
