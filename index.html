@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>e-Parki | Lista</title>
+  <title>e-Parki</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
@@ -31,27 +31,19 @@
 
   <!--// App header start -->
   <section class="c-app-header">
-    <div class="container">
-      <div class="row">
+
+    <div class="container" id="page-content-wrapper">
+      <div class="row mb-3">
         <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between u-width-100">
           <a class="navbar-brand" href="#">
-            <img src="assets/img/logo_eparki.svg" alt="logo" style="height: 36px;" />
+            <img src="assets/img/logo/logo_narwianski_horizontal.png" alt="logo" class="c-app-header__logo-desktop"
+              style="height: 50px;" />
+            <img src="assets/img/logo/logo_narwianski.png" alt="logo" class="c-app-header__logo-mobile"
+              style="height: 50px;" />
           </a>
 
           <div>
-            <ul class="navbar-nav mr-auto1">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="nav-link__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#616161" width="24px"
-                      height="24px">
-                      <path d="M0 0h24v24H0z" fill="none" />
-                      <path
-                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-                    </svg>
-                  </i>
-                  <span class="nav-link__caption">Regulamin</span></a>
-              </li>
+            <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <i class="nav-link__icon">
@@ -75,6 +67,17 @@
                   <span class="nav-link__caption">Wybierz język</span>
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="nav-link__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#616161">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                    </svg>
+                  </i>
+                  <span class="nav-link__caption">Koszyk</span></a>
+              </li>
               <li class="nav-item border-left">
                 <a class="nav-link" href="#" tabindex="-1">
                   <i class="nav-link__icon">
@@ -84,21 +87,92 @@
                         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
                     </svg>
                   </i>
-                  <span class="nav-link__caption">Profil</span>
+                  <span class="nav-link__caption">Anna Kowalska</span>
                 </a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
+      <div class="row d-flex justify-content-between">
+        <div class="c-mobile-section-title">
+          <a href="" class="c-mobile-section-title__menu-trigger mr-3"  data-toggle="modal" data-target="#sideBar">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            </svg>
+          </a>
+          <h1 class="c-mobile-section-title__heading">Sprzedaż biletów</h1>
+        </div>
+        <div class="c-mobile-buy-ticket p-2 pr-3">
+          <button type="button" class="btn btn-outline-primary">Kup bilet</button>
+        </div>
+
+        <ul class="c-app-menu nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Sprzedaż biletów</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">O parku</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Formularz kontaktowy</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Ważne dokumenty</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">
+                <span class="mr-4">
+                  Klauzula informacyjna
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#424242">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z" />
+                  </svg>
+                </span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <span class="mr-4">
+                  Podstawowe informacje
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#424242">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z" />
+                  </svg>
+                </span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <span class="mr-4">
+                  Regulamin parku
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#424242">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="c-app-header-container__border-bottom"> </div>
+      </div>
+    </div>
+    <div class="c-app-header__border-bottom">
     </div>
   </section>
-
   <!--// App header end -->
 
-
   <!--// Park filters -->
-  <div class="c-top-actions">
+  <section class="c-top-actions">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-lg-6 mb-4 d-flex justify-content-xl-start justify-content-around">
@@ -141,304 +215,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!--// Park filters end -->
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div class="tab-pane fade show active" id="map" role="tabpanel" aria-labelledby="map-tab">
+  <!--// Main views -->
 
-      <!--// Park map -->
-      <div class="container">
-        <div class="row">
-          <div class="c-map">
-            <img src="assets/img/map.png" width="100%" alt="">
-
-            <div class="c-park-pin" style="top: 94px; left: 167px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-              </div>
-            </div>
-
-            <div class="c-park-pin" style="top: 2px; left: 391px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_slowinski.png"
-                  alt="Słowiński Park Narodowy">
-              </div>
-            </div>
-
-            <div class="c-park-pin" style="top: 66px; left: 844px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_wigierski.png"
-                  alt="Wigierski Park Narodowy">
-              </div>
-            </div>
-
-            <div class="c-park-pin" style="top: 116px; left: 814px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_biebrzanski.png"
-                  alt="Biebrzański Park Narodowy"></div>
-            </div>
-
-            <div class="c-park-pin" style="top: 150px; left: 250px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_drawienski.png"
-                  alt="Drawieński Park Narodowy">
-              </div>
-            </div>
-
-            <div class="c-park-pin" style="top: 174px; left: 838px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_narwianski.png"
-                  alt="Narwiański Park Narodowy">
-              </div>
-            </div>
-
-            <div class="c-park-pin" style="top: 261px; left: 351px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_wielkopolski.png"
-                  alt="Wielkopolski Park Narodowy"></div>
-            </div>
-
-            <div class="c-park-pin" style="top: 489px; left: 251px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_karkonoski.png"
-                  alt="Karkonoski Park Narodowy">
-              </div>
-            </div>
-
-            <div class="c-park-pin" style="top: 562px; left: 342px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_gorystolowe.png"
-                  alt="Park Narodowy Gór Stołowych"></div>
-            </div>
-
-            <div class="c-park-pin" style="top: 455px; left: 861px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_poleski.png" alt="Poleski Park Narodowy">
-              </div>
-            </div>
-
-            <div class="c-park-pin" style="top: 550px; left: 861px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_roztoczanski.png"
-                  alt="Roztoczański Park Narodowy"></div>
-            </div>
-
-            <div class="c-park-pin" style="top: 647px; left: 575px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_babiogorski.png"
-                  alt="Babiogórski Park Narodowy"></div>
-            </div>
-
-            <div class="c-park-pin" style="top: 684px; left: 619px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_gorczanski.png"
-                  alt="Gorczański Park Narodowy">
-              </div>
-            </div>
-
-            <div class="c-park-pin" style="top: 650px; left: 750px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_magurski.png" alt="Magurski Park Narodowy">
-              </div>
-            </div>
-
-            <div class="c-park-pin" style="top: 715px; left: 861px;">
-              <div class="c-park-pin__image"><img src="assets/img/logo/logo_bieszczadzki.png"
-                  alt="Bieszczadzki Park Narodowy"></div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <!--// Park map end -->
-
-    </div>
-
-    <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
-
-      <!--// Park list -->
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
-            <div class="c-park-item">
-              <div class="d-flex flex-column u-width-100">
-                <div class="d-flex flex-row">
-                  <div class="c-park-item__image">
-                    <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-                  </div>
-                  <div class="d-flex flex-column" style="flex-grow: 1;">
-                    <div class="c-park-item__title">Woliński Park Narodowy</div>
-                    <div class="c-park-item__attractions">
-                      <span class="c-park-item__attraction ng-star-inserted">
-                        <img src="assets/img/icons/camping.svg" alt="camping"></span>
-                      <span class="c-park-item__attraction ng-star-inserted">
-                        <img src="assets/img/icons/fishing.svg" alt="fishing">
-                      </span>
-                    </div>
-                    <div class="c-park-item__separator"></div>
-                  </div>
-                </div>
-                <div class="d-flex flex-row justify-content-end">
-                  <div class="c-park-item__actions">
-                    <button type="button" class="btn btn-light">Otwórz na mapie</button>
-
-                    <button type="button" class="btn btn-outline-primary ml-2">
-                      KUP BILET
-                    </button>
-                  </div>
-                </div>
-                <div class="d-flex flex-row justify-content-end">
-                  <div class="c-park-item__footer"></div>
-                </div>
-                <div class="c-park-item__border-bottom"
-                  style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
-            <div class="c-park-item">
-              <div class="d-flex flex-column u-width-100">
-                <div class="d-flex flex-row">
-                  <div class="c-park-item__image">
-                    <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-                  </div>
-                  <div class="d-flex flex-column" style="flex-grow: 1;">
-                    <div class="c-park-item__title">Woliński Park Narodowy</div>
-                    <div class="c-park-item__attractions">
-                      <span class="c-park-item__attraction ng-star-inserted">
-                        <img src="assets/img/icons/camping.svg" alt="camping"></span>
-                      <span class="c-park-item__attraction ng-star-inserted">
-                        <img src="assets/img/icons/fishing.svg" alt="fishing">
-                      </span>
-                    </div>
-                    <div class="c-park-item__separator"></div>
-                  </div>
-                </div>
-                <div class="d-flex flex-row justify-content-end">
-                  <div class="c-park-item__actions">
-                    <button type="button" class="btn btn-light">Otwórz na mapie</button>
-
-                    <button type="button" class="btn btn-outline-primary ml-2">
-                      KUP BILET
-                    </button>
-                  </div>
-                </div>
-                <div class="d-flex flex-row justify-content-end">
-                  <div class="c-park-item__footer"></div>
-                </div>
-                <div class="c-park-item__border-bottom"
-                  style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
-            <div class="c-park-item">
-              <div class="d-flex flex-column u-width-100">
-                <div class="d-flex flex-row">
-                  <div class="c-park-item__image">
-                    <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-                  </div>
-                  <div class="d-flex flex-column" style="flex-grow: 1;">
-                    <div class="c-park-item__title">Woliński Park Narodowy</div>
-                    <div class="c-park-item__attractions">
-                      <span class="c-park-item__attraction ng-star-inserted">
-                        <img src="assets/img/icons/camping.svg" alt="camping"></span>
-                      <span class="c-park-item__attraction ng-star-inserted">
-                        <img src="assets/img/icons/fishing.svg" alt="fishing">
-                      </span>
-                    </div>
-                    <div class="c-park-item__separator"></div>
-                  </div>
-                </div>
-                <div class="d-flex flex-row justify-content-end">
-                  <div class="c-park-item__actions">
-                    <button type="button" class="btn btn-light">Otwórz na mapie</button>
-
-                    <button type="button" class="btn btn-outline-primary ml-2">
-                      KUP BILET
-                    </button>
-                  </div>
-                </div>
-                <div class="d-flex flex-row justify-content-end">
-                  <div class="c-park-item__footer"></div>
-                </div>
-                <div class="c-park-item__border-bottom"
-                  style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
-            <div class="c-park-item">
-              <div class="d-flex flex-column u-width-100">
-                <div class="d-flex flex-row">
-                  <div class="c-park-item__image">
-                    <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-                  </div>
-                  <div class="d-flex flex-column" style="flex-grow: 1;">
-                    <div class="c-park-item__title">Woliński Park Narodowy</div>
-                    <div class="c-park-item__attractions">
-                      <span class="c-park-item__attraction ng-star-inserted">
-                        <img src="assets/img/icons/camping.svg" alt="camping"></span>
-                      <span class="c-park-item__attraction ng-star-inserted">
-                        <img src="assets/img/icons/fishing.svg" alt="fishing">
-                      </span>
-                    </div>
-                    <div class="c-park-item__separator"></div>
-                  </div>
-                </div>
-                <div class="d-flex flex-row justify-content-end">
-                  <div class="c-park-item__actions">
-                    <button type="button" class="btn btn-light">Otwórz na mapie</button>
-
-                    <button type="button" class="btn btn-outline-primary ml-2">
-                      KUP BILET
-                    </button>
-                  </div>
-                </div>
-                <div class="d-flex flex-row justify-content-end">
-                  <div class="c-park-item__footer"></div>
-                </div>
-                <div class="c-park-item__border-bottom"
-                  style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
-            <div class="c-park-item">
-              <div class="d-flex flex-column u-width-100">
-                <div class="d-flex flex-row">
-                  <div class="c-park-item__image">
-                    <img src="assets/img/logo/logo_wolinski.png" alt="Woliński Park Narodowy">
-                  </div>
-                  <div class="d-flex flex-column" style="flex-grow: 1;">
-                    <div class="c-park-item__title">Woliński Park Narodowy</div>
-                    <div class="c-park-item__attractions">
-                      <span class="c-park-item__attraction ng-star-inserted">
-                        <img src="assets/img/icons/camping.svg" alt="camping"></span>
-                      <span class="c-park-item__attraction ng-star-inserted">
-                        <img src="assets/img/icons/fishing.svg" alt="fishing">
-                      </span>
-                    </div>
-                    <div class="c-park-item__separator"></div>
-                  </div>
-                </div>
-                <div class="d-flex flex-row justify-content-end">
-                  <div class="c-park-item__actions">
-                    <button type="button" class="btn btn-light">Otwórz na mapie</button>
-
-                    <button type="button" class="btn btn-outline-primary ml-2">
-                      KUP BILET
-                    </button>
-                  </div>
-                </div>
-                <div class="d-flex flex-row justify-content-end">
-                  <div class="c-park-item__footer"></div>
-                </div>
-                <div class="c-park-item__border-bottom"
-                  style="background: linear-gradient(to right, rgb(121, 186, 230), rgb(128, 106, 79), rgb(211, 170, 103));">
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <!--// Park list end -->
-
-    </div>
-  </div>
+  <!--// Main views end-->
 
 
   <!--// Select language modal -->
@@ -685,6 +467,7 @@
   </div>
   <!--// Select park feature modal end -->
 
+
   <!--// Select country region modal -->
   <div class="modal fade" id="regionModal" tabindex="-1" role="dialog" aria-labelledby="regionModal" aria-hidden="true">
     <div class="modal-dialog">
@@ -729,7 +512,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
                       viewBox="0 0 24 24" width="24">
                       <rect fill="none" height="24" width="24" />
-                      <path d="M5,15h2V8.41L18.59,20L20,18.59L8.41,7H15V5H5V15z" fill="#000000de"/>
+                      <path d="M5,15h2V8.41L18.59,20L20,18.59L8.41,7H15V5H5V15z" fill="#000000de" />
                     </svg>
                   </i>
                   Północny zachód (NW)
@@ -747,7 +530,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
                       viewBox="0 0 24 24" width="24">
                       <rect fill="none" height="24" width="24" />
-                      <path d="M9,5v2h6.59L4,18.59L5.41,20L17,8.41V15h2V5H9z" fill="#000000de"/>
+                      <path d="M9,5v2h6.59L4,18.59L5.41,20L17,8.41V15h2V5H9z" fill="#000000de" />
                     </svg>
                   </i>
                   Północny wschód (NE)
@@ -765,7 +548,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
                       viewBox="0 0 24 24" width="24">
                       <rect fill="none" height="24" width="24" />
-                      <path d="M19,9h-2v6.59L5.41,4L4,5.41L15.59,17H9v2h10V9z" fill="#000000de"/>
+                      <path d="M19,9h-2v6.59L5.41,4L4,5.41L15.59,17H9v2h10V9z" fill="#000000de" />
                     </svg>
                   </i>
                   Południowy wschód (SE)
@@ -806,6 +589,132 @@
   </div>
   <!--// Select language modal end -->
 
+  <!--// Select country region modal -->
+  <div class="modal left fade" id="sideBar" tabindex="-1" role="dialog" aria-labelledby="sideBar" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <img src="assets/img/logo/logo_narwianski.png" alt="logo" class="c-app-header__logo-mobile"
+          style="height: 50px;" />
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px" height="24px">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="list-group list-group-flush">
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Sprzedaż biletów
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  O parku
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Mój profil
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Formularz kontaktowy
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Adres i kontakt do parku
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                   Metody płatności
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                   Wybierz język
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Klauzula informacyjna
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#424242">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Podstawowe informacje
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#424242">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Regulamin parku
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#424242">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Select language modal end -->
+
+  <script src="main.bundle.js" async></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
 </body>
 
 </html>

@@ -11,38 +11,6 @@ html {
   Custom styles
 */
 
-.c-app-header {
-  align-items: center;
-  justify-content: space-between;
-  color: #616161;
-  background-color: #fff !important;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
-  height: 72px;
-}
-.c-app-header .row {
-  height: 100%;
-}
-
-.c-app-header .nav-link__icon,
-.c-app-header .nav-link__caption {
-  color: #616161;
-}
-
-.c-app-header .nav-link__caption {
-  display: none !important;
-}
-
-.c-app-header .nav-link__icon {
-  margin-right: 0;
-}
-
-.c-app-header .nav-link__caption {
-  display: none !important;
-}
-
-.c-app-header .navbar-nav {
-  flex-direction: row !important;
-}
 
 .c-custom-icon {
   background: #eee;
@@ -294,19 +262,6 @@ html {
 }
 
 @media (min-width: 990px) {
-  .c-app-header .nav-link__caption {
-    display: inline-block !important;
-  }
-
-  .nav-item {
-    padding: 0.5rem 18px;
-    font-size: 14px;
-  }
-
-  .c-app-header .nav-link__icon {
-    margin-right: 12px !important;
-  }
-
   .c-top-actions .c-menu-button__icon {
     display: flex;
   }
@@ -381,7 +336,6 @@ html {
   border-radius: 4px;
 }
 
-@import "./map.scss";
 
 .btn-primary {
   color: #fff;
@@ -421,3 +375,8 @@ html {
     border-radius: 0;
   }
 }
+
+
+@import "./map.scss";
+@import "./app-header.scss";
+@import "./app-sidebar.scss";
