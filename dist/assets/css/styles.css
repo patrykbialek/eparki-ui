@@ -828,3 +828,18 @@ html {
     height: 550px; }
     .carousel-item img {
       transform: translate(0, -200px); } }
+
+.c-contact-form__form label {
+  font-size: 12px; }
+
+.c-contact-form__help {
+  display: none; }
+
+.c-contact-form .c-section-header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #424242; }
+
+@media (min-width: 990px) {
+  .c-contact-form__help {
+    display: block; } }
