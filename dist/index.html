@@ -96,22 +96,23 @@
       </div>
       <div class="row d-flex justify-content-between">
         <div class="c-mobile-section-title">
-          <a href="" class="c-mobile-section-title__menu-trigger mr-3 js-menu" data-toggle="modal" data-target="#sideBar">
+          <a href="" class="c-mobile-section-title__menu-trigger mr-3 js-menu" data-toggle="modal"
+            data-target="#sideBar">
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
               <path d="M0 0h24v24H0z" fill="none" />
               <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
             </svg>
           </a>
           <h1 class="c-mobile-section-title__heading">
-            <span class="is-hidden" id="heading-ticket">Sprzedaż biletów</span>
-            <span class="" id="heading-about">O parku</span>
+            <span class="" id="heading-ticket">Sprzedaż biletów</span>
+            <span class="is-hidden" id="heading-about">O parku</span>
             <span class="is-hidden" id="heading-contact">Formularz kontaktowy</span>
           </h1>
         </div>
         <div class="c-mobile-buy-ticket p-2 pr-3">
           <!-- <button type="button" class="btn btn-outline-primary">Kup bilet</button> -->
-          <button type="button" class="btn btn-outline-primary is-hidden" id="button-filters"
-            data-toggle="modal" data-target="#categoryModal">
+          <button type="button" class="btn btn-outline-primary is-hidden" id="button-filters" data-toggle="modal"
+            data-target="#categoryModal">
             <img class="mr-1" src="assets/img/icons/tune-24px.svg" alt="filtry">
             Filtry (6)
           </button>
@@ -119,10 +120,10 @@
 
         <ul class="c-app-menu nav">
           <li class="nav-item">
-            <a class="js-app-menu-link nav-link js-tickets" href="#" id="tickets">Sprzedaż biletów</a>
+            <a class="js-app-menu-link nav-link active js-tickets" href="#" id="tickets">Sprzedaż biletów</a>
           </li>
           <li class="nav-item">
-            <a class="js-app-menu-link nav-link active js-about" href="#" id="about">O parku</a>
+            <a class="js-app-menu-link nav-link  js-about" href="#" id="about">O parku</a>
           </li>
           <li class="nav-item">
             <a class="js-app-menu-link nav-link js-contact" href="#" id="contact">Formularz kontaktowy</a>
@@ -182,7 +183,7 @@
 
 
   <!--// Park filters -->
-  <section class="c-top-actions is-hidden" id="top-actions">
+  <section class="c-top-actions" id="top-actions">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 d-flex justify-content-xl-between justify-content-between">
@@ -285,7 +286,7 @@
   <!--// Main views -->
 
   <!--// Ticket details -->
-  <div class="container pt-4 is-hidden" id="ticket-details">
+  <div class="container pt-4" id="ticket-details">
     <div class="row">
 
       <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-4">
@@ -599,7 +600,7 @@
 
 
   <!--// About park -->
-  <section class="dummy" id="about-park">
+  <section class="is-hidden" id="about-park">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -815,6 +816,33 @@
     </div>
   </section>
   <!--// Contact form end-->
+
+  <!--// Basket summary -->
+  <section class="c-basket-summary">
+    <div class="container">
+      <div class="c-basket-summary--desktop">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-end">
+            <div class="c-basket-summary__products">0 produktów w koszyku</div>
+            <div class="c-basket-summary__total ml-4">0,00 zł</div>
+            <div class="c-basket-summary__action ml-4">
+              <button type="button" class="btn btn-light">Idź do koszyka</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c-basket-summary--mobile">
+        <div class="row">
+          <div class="c-basket-summary__products col-8">0 produktów w koszyku</div>
+          <div class="c-basket-summary__total col-4">0,00 zł</div>
+          <!-- <div class="c-basket-summary__action col-12 mt-3">
+            <button type="button" class="btn btn-light btn-block">Idź do koszyka</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--// Basket summary end-->
 
   <!--// Main views end-->
 
@@ -1219,7 +1247,8 @@
                 </div>
               </div>
             </a>
-            <a class="list-group-item list-group-item-action" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#languageModal">
+            <a class="list-group-item list-group-item-action" data-dismiss="modal" aria-label="Close"
+              data-toggle="modal" data-target="#languageModal">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   Wybierz język

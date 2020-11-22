@@ -843,3 +843,27 @@ html {
 @media (min-width: 990px) {
   .c-contact-form__help {
     display: block; } }
+
+.c-basket-summary {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 12px 0;
+  background-color: #538249;
+  color: #fafafa;
+  z-index: 100;
+  font-weight: bold;
+  box-shadow: 0 -5px 5px -5px #333; }
+  .c-basket-summary--desktop {
+    display: none; }
+  .c-basket-summary--mobile {
+    display: block; }
+  .c-basket-summary__total {
+    text-align: right; }
+
+@media (min-width: 990px) {
+  .c-basket-summary--desktop {
+    display: block; }
+  .c-basket-summary--mobile {
+    display: none; } }
