@@ -103,8 +103,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: AppMenu */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppMenu", function() { return AppMenu; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // import '../assets/css/styles.css';
 var topActionsFilters = document.querySelector("#top-actions-filters");
@@ -120,6 +131,67 @@ function toggleTopActionsFilters() {
     moreLessTrigger.classList.add("more");
   }
 }
+
+var AppMenu = /*#__PURE__*/function () {
+  function AppMenu() {
+    _classCallCheck(this, AppMenu);
+
+    _defineProperty(this, "ticketsButton", document.querySelector("#tickets"));
+
+    _defineProperty(this, "aboutButton", document.querySelector("#about"));
+
+    _defineProperty(this, "contactButton", document.querySelector("#contact"));
+  }
+
+  _createClass(AppMenu, [{
+    key: "init",
+    value: function init() {
+      this.ticketsButton.addEventListener("click", this.toggleMenu.bind(this));
+      this.aboutButton.addEventListener("click", this.toggleMenu.bind(this));
+      this.contactButton.addEventListener("click", this.toggleMenu.bind(this));
+    }
+  }, {
+    key: "toggleMenu",
+    value: function toggleMenu(event) {
+      var component = event.target;
+      var navLink = document.querySelector(".js-app-menu-link.active");
+      navLink.classList.remove("active");
+      component.classList.add("active");
+
+      if (component.id === "tickets") {
+        this.handleTicketsRoute();
+      }
+
+      if (component.id === "about") {
+        this.handleAboutRoute();
+      }
+    }
+  }, {
+    key: "handleTicketsRoute",
+    value: function handleTicketsRoute() {
+      var topActionContainer = document.querySelector("#top-actions");
+      var ticketDetailsContainer = document.querySelector("#ticket-details");
+      topActionContainer.style.display = "block";
+      ticketDetailsContainer.style.display = "block";
+      var aboutContainer = document.querySelector("#about-park");
+      aboutContainer.style.display = "none";
+    }
+  }, {
+    key: "handleAboutRoute",
+    value: function handleAboutRoute() {
+      var topActionContainer = document.querySelector("#top-actions");
+      var ticketDetailsContainer = document.querySelector("#ticket-details");
+      topActionContainer.style.display = "none";
+      ticketDetailsContainer.style.display = "none";
+      var aboutContainer = document.querySelector("#about-park");
+      aboutContainer.style.display = "block";
+    }
+  }]);
+
+  return AppMenu;
+}();
+var appMenu = new AppMenu();
+appMenu.init();
 
 /***/ }),
 

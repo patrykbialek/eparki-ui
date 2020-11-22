@@ -11,7 +11,7 @@
 
     &.active {
       color: #537e37;
-      font-weight: bold;
+      // font-weight: bold;
     }
   }
 }
@@ -35,6 +35,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  padding-right: 0;
   &__heading {
     padding: 0;
     margin: 0;

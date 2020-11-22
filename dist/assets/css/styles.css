@@ -407,8 +407,7 @@ html {
   .c-app-header .nav-link {
     color: #424242; }
     .c-app-header .nav-link.active {
-      color: #537e37;
-      font-weight: bold; }
+      color: #537e37; }
 
 .c-app-menu {
   display: none; }
@@ -425,7 +424,8 @@ html {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem; }
+  padding: 0.5rem 1rem;
+  padding-right: 0; }
   .c-mobile-section-title__heading {
     padding: 0;
     margin: 0;
@@ -702,3 +702,126 @@ html {
   .c-ticket-item:hover {
     box-shadow: 0 2px 3px -1px rgba(128, 103, 103, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
     transform: translateY(-2px); }
+
+.c-about-park .c-section-header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #424242; }
+
+.c-about-park__attractions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.c-about-park__attractions-item {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  padding: 16px;
+  margin-right: 24px; }
+
+.c-about-park__attractions-image {
+  width: 80px;
+  height: 80px;
+  padding: 8px;
+  background-color: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 8px; }
+  .c-about-park__attractions-image img {
+    width: 42px; }
+
+.c-about-park__attractions-caption {
+  font-size: 14px;
+  width: 80px;
+  text-align: center; }
+
+.c-about-park__practical-information-list {
+  padding-inline-start: 16px; }
+
+.c-about-park__future-events-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0; }
+
+.c-about-park__future-events-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px; }
+
+.c-about-park__future-events-date {
+  width: 80px;
+  height: 80px;
+  background-color: #eee;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24px; }
+
+.c-about-park__future-events-name h1,
+.c-about-park__future-events-name h2,
+.c-about-park__future-events-name h3,
+.c-about-park__future-events-name h4 {
+  font-size: 18px;
+  font-weight: bold; }
+
+.c-about-park__future-events-details {
+  width: calc(100% - 80px - 48px); }
+
+.c-about-park__future-events-description {
+  font-size: 16px; }
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  width: 100%; }
+
+.info {
+  text-align: left;
+  max-width: 1140px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.carousel-item:after {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 72%, black 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 72%, black 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 72%, black 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+@media (min-width: 990px) {
+  .carousel {
+    height: 550px; }
+  .carousel-item {
+    height: 550px; }
+    .carousel-item img {
+      transform: translate(0, -200px); } }
