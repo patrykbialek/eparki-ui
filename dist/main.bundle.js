@@ -171,20 +171,20 @@ var AppMenu = /*#__PURE__*/function () {
     value: function handleTicketsRoute() {
       var topActionContainer = document.querySelector("#top-actions");
       var ticketDetailsContainer = document.querySelector("#ticket-details");
-      topActionContainer.style.display = "block";
-      ticketDetailsContainer.style.display = "block";
+      topActionContainer.classList.remove('is-hidden');
+      ticketDetailsContainer.classList.remove('is-hidden');
       var aboutContainer = document.querySelector("#about-park");
-      aboutContainer.style.display = "none";
+      aboutContainer.classList.add('is-hidden');
     }
   }, {
     key: "handleAboutRoute",
     value: function handleAboutRoute() {
       var topActionContainer = document.querySelector("#top-actions");
       var ticketDetailsContainer = document.querySelector("#ticket-details");
-      topActionContainer.style.display = "none";
-      ticketDetailsContainer.style.display = "none";
+      topActionContainer.classList.add('is-hidden');
+      ticketDetailsContainer.classList.add('is-hidden');
       var aboutContainer = document.querySelector("#about-park");
-      aboutContainer.style.display = "block";
+      aboutContainer.classList.remove('is-hidden');
     }
   }]);
 

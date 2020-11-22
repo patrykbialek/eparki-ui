@@ -43,21 +43,21 @@ export class AppMenu {
   handleTicketsRoute() {
     const topActionContainer = document.querySelector("#top-actions");
     const ticketDetailsContainer = document.querySelector("#ticket-details");
-    topActionContainer.style.display = "block";
-    ticketDetailsContainer.style.display = "block";
+    topActionContainer.classList.remove('is-hidden');
+    ticketDetailsContainer.classList.remove('is-hidden');
 
     const aboutContainer = document.querySelector("#about-park");
-    aboutContainer.style.display = "none";
+    aboutContainer.classList.add('is-hidden');
   }
 
   handleAboutRoute() {
     const topActionContainer = document.querySelector("#top-actions");
     const ticketDetailsContainer = document.querySelector("#ticket-details");
-    topActionContainer.style.display = "none";
-    ticketDetailsContainer.style.display = "none";
+    topActionContainer.classList.add('is-hidden');
+    ticketDetailsContainer.classList.add('is-hidden');
 
     const aboutContainer = document.querySelector("#about-park");
-    aboutContainer.style.display = "block";
+    aboutContainer.classList.remove('is-hidden');
   }
 }
 

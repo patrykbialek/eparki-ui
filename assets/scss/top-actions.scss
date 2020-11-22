@@ -1,6 +1,6 @@
 .c-top-actions {
   display: none;
-
+  
   &__filters-container {
     height: 42px;
     overflow: hidden;
@@ -127,4 +127,8 @@
     display: flex;
     padding: 24px 0 0 0;
   }
+}
+
+.is-hidden {
+  display: none!important;
 }

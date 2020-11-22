@@ -652,6 +652,9 @@ html {
     display: flex;
     padding: 24px 0 0 0; } }
 
+.is-hidden {
+  display: none !important; }
+
 .c-ticket-item {
   border-radius: 4px;
   position: relative;
