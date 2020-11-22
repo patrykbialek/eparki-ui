@@ -1,0 +1,62 @@
+.c-ticket-item {
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fff;
+  &__image-container {
+    width: 72px;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    padding-top: 32px;
+  }
+  &__image {
+    width: 42px;
+    height: 42px;
+    background-color: #eee;
+    border-radius: 50%;
+    padding: 8px;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-flex;
+    height: 56px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__subtitle_1 {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  &__subtitle_2 {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+  }
+  &__price {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  &__separator {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  &__actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 0.5rem !important;
+    padding-top: 0.5rem !important;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 3px -1px rgba(128, 103, 103, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+}
