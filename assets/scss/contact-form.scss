@@ -1,0 +1,21 @@
+.c-contact-form {
+  &__form {
+    label {
+      font-size: 12px;
+    }
+  }
+  &__help {
+    display: none;
+  }
+  .c-section-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #424242;
+  }
+}
+
+@media (min-width: 990px) {
+  .c-contact-form__help {
+    display: block;
+  }
+}

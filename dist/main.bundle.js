@@ -136,11 +136,11 @@ var AppMenu = /*#__PURE__*/function () {
   function AppMenu() {
     _classCallCheck(this, AppMenu);
 
-    _defineProperty(this, "ticketsButton", document.querySelector("#tickets"));
+    _defineProperty(this, "ticketsButton", document.querySelector(".js-tickets"));
 
-    _defineProperty(this, "aboutButton", document.querySelector("#about"));
+    _defineProperty(this, "aboutButton", document.querySelector(".js-about"));
 
-    _defineProperty(this, "contactButton", document.querySelector("#contact"));
+    _defineProperty(this, "contactButton", document.querySelectorAll(".js-contact"));
   }
 
   _createClass(AppMenu, [{
@@ -148,7 +148,8 @@ var AppMenu = /*#__PURE__*/function () {
     value: function init() {
       this.ticketsButton.addEventListener("click", this.toggleMenu.bind(this));
       this.aboutButton.addEventListener("click", this.toggleMenu.bind(this));
-      this.contactButton.addEventListener("click", this.toggleMenu.bind(this));
+      this.contactButton[0].addEventListener("click", this.toggleMenu.bind(this));
+      this.contactButton[1].addEventListener("click", this.toggleMenu.bind(this));
     }
   }, {
     key: "toggleMenu",
@@ -165,26 +166,70 @@ var AppMenu = /*#__PURE__*/function () {
       if (component.id === "about") {
         this.handleAboutRoute();
       }
+
+      if (component.id === "contact") {
+        this.handleContactRoute();
+      }
     }
   }, {
     key: "handleTicketsRoute",
     value: function handleTicketsRoute() {
       var topActionContainer = document.querySelector("#top-actions");
       var ticketDetailsContainer = document.querySelector("#ticket-details");
-      topActionContainer.classList.remove('is-hidden');
-      ticketDetailsContainer.classList.remove('is-hidden');
+      var contactContainer = document.querySelector("#contact-form");
+      var headingTicketContainer = document.querySelector("#heading-ticket");
+      var headingAboutContainer = document.querySelector("#heading-about");
+      var headingContactContainer = document.querySelector("#heading-contact");
+      var buttonFilters = document.querySelector("#button-filters");
+      headingAboutContainer.classList.add("is-hidden");
+      headingContactContainer.classList.add("is-hidden");
+      buttonFilters.classList.remove("is-hidden");
+      topActionContainer.classList.remove("is-hidden");
+      ticketDetailsContainer.classList.remove("is-hidden");
+      headingTicketContainer.classList.remove("is-hidden");
       var aboutContainer = document.querySelector("#about-park");
-      aboutContainer.classList.add('is-hidden');
+      contactContainer.classList.add("is-hidden");
+      aboutContainer.classList.add("is-hidden");
     }
   }, {
     key: "handleAboutRoute",
     value: function handleAboutRoute() {
       var topActionContainer = document.querySelector("#top-actions");
       var ticketDetailsContainer = document.querySelector("#ticket-details");
-      topActionContainer.classList.add('is-hidden');
-      ticketDetailsContainer.classList.add('is-hidden');
+      var contactContainer = document.querySelector("#contact-form");
+      var headingTicketContainer = document.querySelector("#heading-ticket");
+      var headingAboutContainer = document.querySelector("#heading-about");
+      var headingContactContainer = document.querySelector("#heading-contact");
+      var buttonFilters = document.querySelector("#button-filters");
+      buttonFilters.classList.add("is-hidden");
+      topActionContainer.classList.add("is-hidden");
+      ticketDetailsContainer.classList.add("is-hidden");
+      contactContainer.classList.add("is-hidden");
+      headingTicketContainer.classList.add("is-hidden");
+      headingContactContainer.classList.add("is-hidden");
       var aboutContainer = document.querySelector("#about-park");
-      aboutContainer.classList.remove('is-hidden');
+      aboutContainer.classList.remove("is-hidden");
+      headingAboutContainer.classList.remove("is-hidden");
+    }
+  }, {
+    key: "handleContactRoute",
+    value: function handleContactRoute() {
+      var topActionContainer = document.querySelector("#top-actions");
+      var ticketDetailsContainer = document.querySelector("#ticket-details");
+      var aboutContainer = document.querySelector("#about-park");
+      var headingTicketContainer = document.querySelector("#heading-ticket");
+      var headingAboutContainer = document.querySelector("#heading-about");
+      var headingContactContainer = document.querySelector("#heading-contact");
+      headingTicketContainer.classList.add("is-hidden");
+      headingAboutContainer.classList.add("is-hidden");
+      var buttonFilters = document.querySelector("#button-filters");
+      buttonFilters.classList.add("is-hidden");
+      topActionContainer.classList.add("is-hidden");
+      ticketDetailsContainer.classList.add("is-hidden");
+      aboutContainer.classList.add("is-hidden");
+      var contactContainer = document.querySelector("#contact-form");
+      contactContainer.classList.remove("is-hidden");
+      headingContactContainer.classList.remove("is-hidden");
     }
   }]);
 

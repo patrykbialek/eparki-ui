@@ -96,17 +96,22 @@
       </div>
       <div class="row d-flex justify-content-between">
         <div class="c-mobile-section-title">
-          <a href="" class="c-mobile-section-title__menu-trigger mr-3" data-toggle="modal" data-target="#sideBar">
+          <a href="" class="c-mobile-section-title__menu-trigger mr-3 js-menu" data-toggle="modal" data-target="#sideBar">
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
               <path d="M0 0h24v24H0z" fill="none" />
               <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
             </svg>
           </a>
-          <h1 class="c-mobile-section-title__heading">Sprzedaż biletów</h1>
+          <h1 class="c-mobile-section-title__heading">
+            <span class="is-hidden" id="heading-ticket">Sprzedaż biletów</span>
+            <span class="" id="heading-about">O parku</span>
+            <span class="is-hidden" id="heading-contact">Formularz kontaktowy</span>
+          </h1>
         </div>
         <div class="c-mobile-buy-ticket p-2 pr-3">
           <!-- <button type="button" class="btn btn-outline-primary">Kup bilet</button> -->
-          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#categoryModal">
+          <button type="button" class="btn btn-outline-primary is-hidden" id="button-filters"
+            data-toggle="modal" data-target="#categoryModal">
             <img class="mr-1" src="assets/img/icons/tune-24px.svg" alt="filtry">
             Filtry (6)
           </button>
@@ -114,13 +119,13 @@
 
         <ul class="c-app-menu nav">
           <li class="nav-item">
-            <a class="js-app-menu-link nav-link " href="#" id="tickets">Sprzedaż biletów</a>
+            <a class="js-app-menu-link nav-link js-tickets" href="#" id="tickets">Sprzedaż biletów</a>
           </li>
           <li class="nav-item">
-            <a class="js-app-menu-link nav-link active" href="#" id="about">O parku</a>
+            <a class="js-app-menu-link nav-link active js-about" href="#" id="about">O parku</a>
           </li>
           <li class="nav-item">
-            <a class="js-app-menu-link nav-link" href="#" id="contact">Formularz kontaktowy</a>
+            <a class="js-app-menu-link nav-link js-contact" href="#" id="contact">Formularz kontaktowy</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
@@ -759,6 +764,58 @@
   </section>
   <!--// About park end-->
 
+  <!--// Contact form -->
+  <section class="c-contact-form is-hidden" id="contact-form">
+    <div class="container pt-4">
+      <div class="row">
+        <div class="col-sm-12 col-xl-7 mb-5 c-contact-form__form">
+          <header class="mb-4">
+            <h1 class="c-section-header">Skontaktuj się z nami</h1>
+          </header>
+          <form>
+            <div class="form-group">
+              <label for="name">Imię i nazwisko</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Adres e-mail</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="subject">Temat</label>
+              <input type="text" class="form-control" id="subject">
+            </div>
+            <div class="form-group mb-4">
+              <label for="message">Wiadomość</label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Wyślij wiadomość</button>
+
+          </form>
+        </div>
+        <div class="col-5 mb-5 c-contact-form__help">
+          <p>
+            Masz wątpliwości? Coś nie działa? Chcesz zwrócić bilet?
+            <br><br>
+            Wpisz temat, który Cię interesuje. Postaramy się odpowiedzieć jak najszybciej.
+            <br><br>
+            W przypadku pytań dotyczących atrakcji i wydarzeń odbywających się w parku, skontaktuj się bezpośrednio z
+            administracją parku:
+            <br>
+            +48 663 103 109
+            poniedziałek-piątek w godz. 7:30-15:30
+            <br>
+            +48 85 7181417
+            sobota-niedziela w godz. 10:00-18:00
+            <br>
+            e-mail: npn@npn.pl
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--// Contact form end-->
+
   <!--// Main views end-->
 
 
@@ -1120,49 +1177,49 @@
         </div>
         <div class="modal-body">
           <div class="list-group list-group-flush">
-            <a href class="list-group-item list-group-item-action border-0">
+            <a href="" class="list-group-item list-group-item-action border-0 js-tickets">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   Sprzedaż biletów
                 </div>
               </div>
             </a>
-            <a href class="list-group-item list-group-item-action border-0">
+            <a href="" class="list-group-item list-group-item-action border-0 js-about">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   O parku
                 </div>
               </div>
             </a>
-            <a href class="list-group-item list-group-item-action">
+            <a href="" class="list-group-item list-group-item-action">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   Mój profil
                 </div>
               </div>
             </a>
-            <a href class="list-group-item list-group-item-action border-0">
+            <a class="list-group-item list-group-item-action border-0 js-contact">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   Formularz kontaktowy
                 </div>
               </div>
             </a>
-            <a href class="list-group-item list-group-item-action border-0">
+            <a href="" class="list-group-item list-group-item-action border-0">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   Adres i kontakt do parku
                 </div>
               </div>
             </a>
-            <a href class="list-group-item list-group-item-action border-0">
+            <a href="" class="list-group-item list-group-item-action border-0">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   Metody płatności
                 </div>
               </div>
             </a>
-            <a href class="list-group-item list-group-item-action">
+            <a class="list-group-item list-group-item-action" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#languageModal">
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   Wybierz język
