@@ -141,6 +141,14 @@ var AppMenu = /*#__PURE__*/function () {
     _defineProperty(this, "aboutButton", document.querySelector(".js-about"));
 
     _defineProperty(this, "contactButton", document.querySelectorAll(".js-contact"));
+
+    _defineProperty(this, "goToRegisterButton", document.querySelector("#button-go-to-register"));
+
+    _defineProperty(this, "goToLoginButton", document.querySelector("#button-go-to-login"));
+
+    _defineProperty(this, "loginForm", document.querySelector("#form-login"));
+
+    _defineProperty(this, "registerForm", document.querySelector("#form-register"));
   }
 
   _createClass(AppMenu, [{
@@ -150,6 +158,8 @@ var AppMenu = /*#__PURE__*/function () {
       this.aboutButton.addEventListener("click", this.toggleMenu.bind(this));
       this.contactButton[0].addEventListener("click", this.toggleMenu.bind(this));
       this.contactButton[1].addEventListener("click", this.toggleMenu.bind(this));
+      this.goToRegisterButton.addEventListener("click", this.goToRegister.bind(this));
+      this.goToLoginButton.addEventListener("click", this.goToLogin.bind(this));
     }
   }, {
     key: "toggleMenu",
@@ -230,6 +240,18 @@ var AppMenu = /*#__PURE__*/function () {
       var contactContainer = document.querySelector("#contact-form");
       contactContainer.classList.remove("is-hidden");
       headingContactContainer.classList.remove("is-hidden");
+    }
+  }, {
+    key: "goToRegister",
+    value: function goToRegister() {
+      this.loginForm.classList.add('is-hidden');
+      this.registerForm.classList.remove('is-hidden');
+    }
+  }, {
+    key: "goToLogin",
+    value: function goToLogin() {
+      this.registerForm.classList.add('is-hidden');
+      this.loginForm.classList.remove('is-hidden');
     }
   }]);
 

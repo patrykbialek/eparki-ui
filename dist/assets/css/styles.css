@@ -867,3 +867,27 @@ html {
     display: block; }
   .c-basket-summary--mobile {
     display: none; } }
+
+.c-profile__form label {
+  font-size: 12px; }
+
+.c-profile .btn-outline-secondary {
+  border: 1px solid #ced4da; }
+
+.c-profile__help {
+  display: none; }
+
+.c-profile__login-facebook, .c-profile__login-google {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 36px; }
+  .c-profile__login-facebook img, .c-profile__login-google img {
+    height: 16px; }
+
+.c-profile__login-google img {
+  height: 22px; }
+
+.c-profile .c-section-header {
+  font-size: 16px;
+  color: #424242; }

@@ -1,0 +1,37 @@
+.c-profile {
+  &__form {
+    label {
+      font-size: 12px;
+    }
+  }
+  .btn-outline-secondary {
+    border: 1px solid #ced4da;
+  }
+  &__help {
+    display: none;
+  }
+  &__login-facebook,
+  &__login-google {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 36px;
+    img {
+      height: 16px;
+    }
+  }
+  &__login-google {
+    img {
+      height: 22px;
+    }
+  }
+  .c-section-header {
+    font-size: 16px;
+    // font-weight: bold;
+    color: #424242;
+  }
+}
+
+.modal-title {
+  // font-weight: bold;
+}

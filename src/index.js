@@ -19,11 +19,19 @@ export class AppMenu {
   aboutButton = document.querySelector(".js-about");
   contactButton = document.querySelectorAll(".js-contact");
 
+  goToRegisterButton = document.querySelector("#button-go-to-register");
+  goToLoginButton = document.querySelector("#button-go-to-login");
+  loginForm = document.querySelector("#form-login");
+  registerForm = document.querySelector("#form-register");
+
   init() {
     this.ticketsButton.addEventListener("click", this.toggleMenu.bind(this));
     this.aboutButton.addEventListener("click", this.toggleMenu.bind(this));
     this.contactButton[0].addEventListener("click", this.toggleMenu.bind(this));
     this.contactButton[1].addEventListener("click", this.toggleMenu.bind(this));
+
+    this.goToRegisterButton.addEventListener("click", this.goToRegister.bind(this));
+    this.goToLoginButton.addEventListener("click", this.goToLogin.bind(this));
   }
 
   toggleMenu(event) {
@@ -114,6 +122,16 @@ export class AppMenu {
     const contactContainer = document.querySelector("#contact-form");
     contactContainer.classList.remove("is-hidden");
     headingContactContainer.classList.remove("is-hidden");
+  }
+
+  goToRegister() {
+    this.loginForm.classList.add('is-hidden');
+    this.registerForm.classList.remove('is-hidden');
+  }
+
+  goToLogin() {
+    this.registerForm.classList.add('is-hidden');
+    this.loginForm.classList.remove('is-hidden');
   }
 }
 
