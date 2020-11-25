@@ -868,26 +868,78 @@ html {
   .c-basket-summary--mobile {
     display: none; } }
 
-.c-profile__form label {
-  font-size: 12px; }
-
-.c-profile .btn-outline-secondary {
-  border: 1px solid #ced4da; }
-
-.c-profile__help {
-  display: none; }
-
-.c-profile__login-facebook, .c-profile__login-google {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 36px; }
-  .c-profile__login-facebook img, .c-profile__login-google img {
-    height: 16px; }
-
-.c-profile__login-google img {
-  height: 22px; }
-
-.c-profile .c-section-header {
-  font-size: 16px;
-  color: #424242; }
+.c-profile {
+  margin-top: -1rem; }
+  .c-profile-nav {
+    margin: 0 -1rem;
+    padding: 0; }
+    .c-profile-nav__item {
+      padding: 0;
+      border-radius: 0;
+      width: 50%;
+      text-align: center; }
+    .c-profile-nav__link {
+      color: #424242 !important;
+      border-radius: 0 !important;
+      padding: 1rem 2rem !important;
+      border-bottom: solid 1px #ccc; }
+      .c-profile-nav__link.active {
+        color: #538249 !important;
+        background-color: transparent !important;
+        border-bottom: solid 1px #538249; }
+  .c-profile__form label {
+    font-size: 12px; }
+  .c-profile .btn-outline-secondary {
+    border: 1px solid #ced4da; }
+  .c-profile__help {
+    display: none; }
+  .c-profile__login-facebook, .c-profile__login-google {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 36px; }
+    .c-profile__login-facebook img, .c-profile__login-google img {
+      height: 16px; }
+  .c-profile__login-google img {
+    height: 22px; }
+  .c-profile .c-section-header {
+    font-size: 16px;
+    color: #424242; }
+  .c-profile-history__item {
+    margin-bottom: 24px; }
+    .c-profile-history__item-details {
+      font-size: 16px;
+      font-weight: bold; }
+    .c-profile-history__item .is-finished,
+    .c-profile-history__item .is-not-finished {
+      font-weight: bold; }
+    .c-profile-history__item .is-not-finished {
+      color: #e91616; }
+    .c-profile-history__item .is-finished {
+      color: #538249; }
+  .c-profile-history__tickets-total {
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc; }
+  .c-profile-history__tickets-actions {
+    display: flex;
+    justify-content: center; }
+    .c-profile-history__tickets-actions a {
+      margin: 0 1rem;
+      border-radius: 50%;
+      border: solid 1px #c4c4c4;
+      padding: 8px;
+      transition: background-color 200ms cubic-bezier(0.35, 0, 0.25, 1); }
+      .c-profile-history__tickets-actions a:hover {
+        text-decoration: none;
+        color: #616161;
+        background-color: #eeeeee; }
+      .c-profile-history__tickets-actions a img {
+        width: 28px;
+        height: 28px; }
+  .c-profile-history__ticket-name {
+    font-size: 14px;
+    font-weight: bold; }
+  .c-profile-history__ticket-details {
+    font-size: 14px; }
+  .c-profile-history__ticket-total {
+    font-size: 14px; }

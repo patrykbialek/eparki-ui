@@ -149,6 +149,10 @@ var AppMenu = /*#__PURE__*/function () {
     _defineProperty(this, "loginForm", document.querySelector("#form-login"));
 
     _defineProperty(this, "registerForm", document.querySelector("#form-register"));
+
+    _defineProperty(this, "invoiceDataContainer", document.querySelector("#invoice-data"));
+
+    _defineProperty(this, "invoiceDataToggle", document.querySelector("#toggle-invoice-data"));
   }
 
   _createClass(AppMenu, [{
@@ -160,6 +164,16 @@ var AppMenu = /*#__PURE__*/function () {
       this.contactButton[1].addEventListener("click", this.toggleMenu.bind(this));
       this.goToRegisterButton.addEventListener("click", this.goToRegister.bind(this));
       this.goToLoginButton.addEventListener("click", this.goToLogin.bind(this));
+      this.invoiceDataToggle.addEventListener("click", this.toggleInvoiceData.bind(this));
+    }
+  }, {
+    key: "toggleInvoiceData",
+    value: function toggleInvoiceData() {
+      if (this.invoiceDataContainer.classList.contains('is-hidden')) {
+        this.invoiceDataContainer.classList.remove('is-hidden');
+      } else {
+        this.invoiceDataContainer.classList.add('is-hidden');
+      }
     }
   }, {
     key: "toggleMenu",

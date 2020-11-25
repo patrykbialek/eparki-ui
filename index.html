@@ -1324,7 +1324,7 @@
         </div>
         <div class="modal-body">
           <div class="c-profile">
-            <section id="form-login">
+            <section class="is-hidden" id="form-login">
               <header class="mb-4">
                 <h1 class="c-section-header">Zaloguj się</h1>
               </header>
@@ -1341,11 +1341,14 @@
                         <input type="password" class="form-control" id="password">
                         <div class="input-group-append">
                           <button class="btn btn-outline-secondary" type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#9E9E9E" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                              fill="#9E9E9E" style="display: none;">
                               <path d="M0 0h24v24H0z" fill="none" />
-                              <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                              <path
+                                d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#9E9E9E">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                              fill="#9E9E9E">
                               <path d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z" fill="none" />
                               <path
                                 d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z" />
@@ -1373,10 +1376,11 @@
                     </button>
                   </div>
                   <div class="col-12 d-flex justify-content-center">
-                    <button type="button" class="btn btn-link" id="button-go-to-register">Nie masz konta? Zarejestruj się</button>
+                    <button type="button" class="btn btn-link" id="button-go-to-register">Nie masz konta? Zarejestruj
+                      się</button>
                   </div>
                 </div>
-  
+
               </form>
             </section>
             <section class="is-hidden" id="form-register">
@@ -1400,11 +1404,14 @@
                         <input type="password" class="form-control" id="password">
                         <div class="input-group-append">
                           <button class="btn btn-outline-secondary" type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#9E9E9E" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                              fill="#9E9E9E" style="display: none;">
                               <path d="M0 0h24v24H0z" fill="none" />
-                              <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                              <path
+                                d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#9E9E9E">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                              fill="#9E9E9E">
                               <path d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z" fill="none" />
                               <path
                                 d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z" />
@@ -1419,11 +1426,14 @@
                         <input type="text" class="form-control" id="password" value="moje_haslo">
                         <div class="input-group-append">
                           <button class="btn btn-outline-secondary" type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#9E9E9E">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                              fill="#9E9E9E">
                               <path d="M0 0h24v24H0z" fill="none" />
-                              <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                              <path
+                                d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#9E9E9E" style="display: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                              fill="#9E9E9E" style="display: none;">
                               <path d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z" fill="none" />
                               <path
                                 d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z" />
@@ -1439,11 +1449,264 @@
                     <button type="button" class="btn btn-primary btn-lg btn-block">Zarejestruj</button>
                   </div>
                   <div class="col-12 d-flex justify-content-center">
-                    <button type="button" class="btn btn-link" id="button-go-to-login">Masz już konto? Zaloguj się</button>
+                    <button type="button" class="btn btn-link" id="button-go-to-login">Masz już konto? Zaloguj
+                      się</button>
                   </div>
                 </div>
-  
+
               </form>
+            </section>
+
+            <!--// My data/history -->
+            <section class="" id="form-my-data">
+              <ul class="nav nav-pills mb-3 c-profile-nav d-flex justify-content-around" id="pills-tab" role="tablist">
+                <li class="nav-item c-profile-nav__item">
+                  <a class="nav-link c-profile-nav__link" id="pills-my-data-tab" data-toggle="pill" href="#pills-my-data" role="tab"
+                    aria-controls="pills-my-data" aria-selected="true">Moje dane</a>
+                </li>
+                <li class="nav-item c-profile-nav__item">
+                  <a class="nav-link active c-profile-nav__link" id="pills-my-history-tab" data-toggle="pill" href="#pills-my-history"
+                    role="tab" aria-controls="pills-profmy-historyile" aria-selected="false">Moje zakupy</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent"  style="height: 70vh; overflow: auto;">
+                <div class="tab-pane fade show" id="pills-my-data" role="tabpanel" aria-labelledby="pills-my-data-tab">
+                  <form class="c-profile__form">
+                    <div class="row mb-2">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="name">Imię i nazwisko</label>
+                          <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Adres e-mail</label>
+                          <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                          <label class="form-check-label" for="toggle-invoice-data">
+                            Domyślne dane do faktury</label>
+                        </div>
+
+                        <div class="mt-2 is-hidden" id="invoice-data">
+                          <div class="form-group">
+                            <label for="name">Nazwa firmy / Imię i nazwisko</label>
+                            <input type="text" class="form-control" id="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Ulica, nr budynku, nr lokalu</label>
+                            <input type="text" class="form-control" id="address">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Kod pocztowy</label>
+                            <input type="text" class="form-control" id="postal-code">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Miejscowość</label>
+                            <input type="text" class="form-control" id="city">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">NIP (opcjonalnie)</label>
+                            <input type="text" class="form-control" id="nip">
+                          </div>
+                        </div>
+
+                        <div class="mt-3 mb-3">
+                          <div class="dropdown-divider"></div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password">Obecne hasło</label>
+                          <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="password">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                  fill="#9E9E9E" style="display: none;">
+                                  <path d="M0 0h24v24H0z" fill="none" />
+                                  <path
+                                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                  fill="#9E9E9E">
+                                  <path d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z" fill="none" />
+                                  <path
+                                    d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Nowe hasło</label>
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="password" value="moje_haslo">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                  fill="#9E9E9E">
+                                  <path d="M0 0h24v24H0z" fill="none" />
+                                  <path
+                                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                  fill="#9E9E9E" style="display: none;">
+                                  <path d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z" fill="none" />
+                                  <path
+                                    d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Powtórz nowe hasło</label>
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="password" value="moje_haslo">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                  fill="#9E9E9E">
+                                  <path d="M0 0h24v24H0z" fill="none" />
+                                  <path
+                                    d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                  fill="#9E9E9E" style="display: none;">
+                                  <path d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z" fill="none" />
+                                  <path
+                                    d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Zapisz zmiany</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade active show" id="pills-my-history" role="tabpanel"
+                  aria-labelledby="pills-my-history-tab">
+                  <section class="c-profile-history">
+                    <div class="c-profile-history__item">
+                      <div class="c-profile-history__item-details mb-3">
+                        Transakcja z dnia: 17/09/2020 na Bieszczadzki Park Narodowy
+                      </div>
+                      <div class="c-profile-history__tickets">
+                        <div class="c-profile-history__ticket">
+                          <div class="c-profile-history__ticket-name mb-3">Zezwolenie 7-dniowe z łodzi na jezioro
+                            Wielkowiejskie
+                            Normalny</div>
+                          <div class="c-profile-history__ticket-details mb-3">
+                            Data: 14/09/2020 - 20/09/2020<br>
+                            Właściciel: Janusz Popanusz<br>
+                            Numer karty wędkarskiej: DFDFDF98u9ui<br>
+                          </div>
+                          <div class="c-profile-history__ticket-total mb-3">
+                            <div class="d-flex justify-content-between">
+                              <div>Ilość razem: <strong>4 szt</strong></div>
+                              <div>Suma: <strong>70,00 zł</strong></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="c-profile-history__tickets-total pt-2 pb-2">
+                          <div class="d-flex justify-content-between">
+                            <div>Ilość razem: <strong>4 szt</strong></div>
+                            <div>Suma: <strong>70,00 zł</strong></div>
+                          </div>
+                        </div>
+                        <div class="c-profile-history__tickets-status pt-3 pb-3">
+                          Status: <span class="is-not-finished">Nieopłacone</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 pt-3 pb-3">
+                          <button type="button" class="btn btn-primary btn-lg btn-block">
+                            Przejdź do płatności (70,00 zł)</button>
+                        </div>
+                        <div class="col-12 pt-3 pb-3">
+                          <div class="c-profile-history__tickets-actions">
+                            <a href="">
+                              <img src="assets/img/icons/delete-24px.svg" alt="">
+                            </a>
+                            <a href="">
+                              <img src="assets/img/icons/contact_page-24px.svg" alt="">
+                            </a>
+                            <a href="">
+                              <img src="assets/img/icons/email-24px.svg" alt="">
+                            </a>
+                            <a href="">
+                              <img src="assets/img/icons/print-24px.svg" alt="">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-profile-history__item">
+                      <div class="c-profile-history__item-details mb-3">
+                        Transakcja z dnia: 11/09/2020 na Bieszczadzki Park Narodowy
+                      </div>
+                      <div class="c-profile-history__tickets">
+                        <div class="c-profile-history__ticket">
+                          <div class="c-profile-history__ticket-name mb-3">Zezwolenie 7-dniowe z łodzi na jezioro
+                            Wielkowiejskie
+                            Normalny</div>
+                          <div class="c-profile-history__ticket-details mb-3">
+                            Data: 01/09/2020 - 03/09/2020<br>
+                            Właściciel: Janusz Popanusz<br>
+                            Numer karty wędkarskiej: DFDFDF98u9ui<br>
+                          </div>
+                          <div class="c-profile-history__ticket-total mb-3">
+                            <div class="d-flex justify-content-between">
+                              <div>Ilość razem: <strong>4 szt</strong></div>
+                              <div>Suma: <strong>70,00 zł</strong></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="c-profile-history__tickets-total pt-2 pb-2">
+                          <div class="d-flex justify-content-between">
+                            <div>Ilość razem: <strong>4 szt</strong></div>
+                            <div>Suma: <strong>70,00 zł</strong></div>
+                          </div>
+                        </div>
+                        <div class="c-profile-history__tickets-status pt-3 pb-3">
+                          Status: <span class="is-finished">Opłacone</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 pt-3 pb-3">
+                          <button type="button" class="btn btn-primary btn-lg btn-block">
+                            Kup ponownie (70,00 zł)</button>
+                        </div>
+                        <div class="col-12 pt-3 pb-3">
+                          <div class="c-profile-history__tickets-actions">
+                            <a href="">
+                              <img src="assets/img/icons/delete-24px.svg" alt="">
+                            </a>
+                            <a href="">
+                              <img src="assets/img/icons/contact_page-24px.svg" alt="">
+                            </a>
+                            <a href="">
+                              <img src="assets/img/icons/email-24px.svg" alt="">
+                            </a>
+                            <a href="">
+                              <img src="assets/img/icons/print-24px.svg" alt="">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </section>
+                </div>
+              </div>
             </section>
           </div>
         </div>

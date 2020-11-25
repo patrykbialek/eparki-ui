@@ -24,6 +24,9 @@ export class AppMenu {
   loginForm = document.querySelector("#form-login");
   registerForm = document.querySelector("#form-register");
 
+  invoiceDataContainer = document.querySelector("#invoice-data");
+  invoiceDataToggle = document.querySelector("#toggle-invoice-data");
+
   init() {
     this.ticketsButton.addEventListener("click", this.toggleMenu.bind(this));
     this.aboutButton.addEventListener("click", this.toggleMenu.bind(this));
@@ -32,6 +35,16 @@ export class AppMenu {
 
     this.goToRegisterButton.addEventListener("click", this.goToRegister.bind(this));
     this.goToLoginButton.addEventListener("click", this.goToLogin.bind(this));
+
+    this.invoiceDataToggle.addEventListener("click", this.toggleInvoiceData.bind(this));
+  }
+
+  toggleInvoiceData(){
+    if (this.invoiceDataContainer.classList.contains('is-hidden')) {
+      this.invoiceDataContainer.classList.remove('is-hidden');
+    } else {
+      this.invoiceDataContainer.classList.add('is-hidden');
+    }
   }
 
   toggleMenu(event) {
