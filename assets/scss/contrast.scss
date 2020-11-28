@@ -1,0 +1,92 @@
+.t-contrast {
+  * {
+    background-color: #000 !important;
+    color: #ffff00 !important;
+  }
+
+  .c-app-header .nav-link.active {
+    border: solid 1px #fff;
+    border-radius: 50px;
+    color: #fff !important;
+  }
+  .c-app-header__basket-total {
+    border: solid 1px #ffff00;
+  }
+  .c-ticket-item {
+    border: solid 1px #ffff00 !important;
+    border-radius: 4px;
+    * {
+      background-color: transparent !important;
+    }
+    &__image {
+      background-color: #ffff00 !important;
+      border: solid 1px #ffff00;
+    }
+    &__actions .btn {
+      border: solid 1px #fff !important;
+      color: #fff !important;
+    }
+  }
+  .c-app-footer__icon {
+    background-color: #ffff00 !important;
+    border-radius: 50%;
+
+    svg,
+    img {
+      background-color: #ffff00 !important;
+    }
+  }
+
+  .c-top-actions__more-less-trigger img,
+  .c-filter-button__icon img,
+  .c-filter-button__icon svg,
+  .nav-link__icon img,
+  .nav-link__icon svg {
+    background-color: #ffff00 !important;
+    border-radius: 50%;
+  }
+  .c-about-park__attractions-image img,
+  .c-about-park__attractions-image {
+    background-color: #ffff00 !important;
+  }
+
+  .c-top-actions__filters-container .c-filter-button input:checked + label {
+    color: #fff !important;
+    border: solid 1px #fff !important;
+  }
+
+  .c-basket-summary--desktop * {
+    color: #fff !important;
+    .btn {
+      border: solid 1px #fff !important;
+    }
+  }
+
+  .c-about-park__future-events-date {
+    border: solid 1px #ffff00 !important;
+  }
+
+  .c-app-header__logo-desktop--t-default {
+    display: none !important;
+  }
+  .c-app-header__logo-desktop--t-contrast {
+    display: none !important;
+  }
+  .c-app-header__logo-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 990px) {
+  .t-contrast {
+    .c-app-header__logo-desktop--t-default {
+      display: none !important;
+    }
+    .c-app-header__logo-desktop--t-contrast {
+      display: block !important;
+    }
+    .c-app-header__logo-mobile {
+      display: none !important;
+    }
+  }
+}

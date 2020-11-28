@@ -36,16 +36,18 @@
       <div class="row mb-3">
         <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between u-width-100">
           <a class="navbar-brand" href="#">
-            <img src="assets/img/logo/logo_narwianski_horizontal.png" alt="logo" class="c-app-header__logo-desktop"
-              style="height: 50px;" />
-            <img src="assets/img/logo/logo_narwianski.png" alt="logo" class="c-app-header__logo-mobile"
-              style="height: 50px;" />
+            <img src="assets/img/logo/logo_narwianski_horizontal_default.svg" alt="logo"
+              class="c-app-header__logo-desktop c-app-header__logo-desktop--t-default" style="height: 50px;" />
+            <img src="assets/img/logo/logo_narwianski_horizontal_contrast.svg" alt="logo"
+              class="c-app-header__logo-desktop c-app-header__logo-desktop--t-contrast" style="height: 50px;" />
+            <img src="assets/img/logo/logo_narwianski.png" alt="logo"
+             class="c-app-header__logo-mobile" style="height: 50px;" />
           </a>
 
           <div>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="" id="contrast-theme-toggle">
                   <i class="nav-link__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#616161">
                       <path d="M0 0h24v24H0z" fill="none" />
@@ -53,7 +55,8 @@
                         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c1.03.13 2 .45 2.87.93H13v-.93zM13 7h5.24c.25.31.48.65.68 1H13V7zm0 3h6.74c.08.33.15.66.19 1H13v-1zm0 9.93V19h2.87c-.87.48-1.84.8-2.87.93zM18.24 17H13v-1h5.92c-.2.35-.43.69-.68 1zm1.5-3H13v-1h6.93c-.04.34-.11.67-.19 1z" />
                     </svg>
                   </i>
-                  <span class="nav-link__caption">Wersja kontrastowa</span></a>
+                  <span class="nav-link__caption" id="contrast-theme-toggle-caption">Wersja kontrastowa</span>
+                </a>
               </li>
               <li class="nav-item">
                 <a href class="nav-link" data-toggle="modal" data-target="#languageModal">
@@ -1742,7 +1745,8 @@
               <ul class="nav nav-pills mb-3 c-profile-nav d-flex justify-content-around" id="pills-tab" role="tablist">
                 <li class="nav-item c-profile-nav__item">
                   <a class="nav-link active c-profile-nav__link" id="pills-buy-login-tab" data-toggle="pill"
-                    href="#pills-buy-login" role="tab" aria-controls="pills-buy-login" aria-selected="true">Zaloguj się</a>
+                    href="#pills-buy-login" role="tab" aria-controls="pills-buy-login" aria-selected="true">Zaloguj
+                    się</a>
                 </li>
                 <li class="nav-item c-profile-nav__item">
                   <a class="nav-link c-profile-nav__link" id="pills-buy-without-login-tab" data-toggle="pill"
@@ -1751,7 +1755,8 @@
                 </li>
               </ul>
               <div class="tab-content" id="pills-tabContent" style="height: 70vh; overflow: auto;">
-                <div class="tab-pane fade active show" id="pills-buy-login" role="tabpanel" aria-labelledby="pills-buy-login-tab">
+                <div class="tab-pane fade active show" id="pills-buy-login" role="tabpanel"
+                  aria-labelledby="pills-buy-login-tab">
                   <form class="c-profile__form">
                     <div class="row mb-2">
                       <div class="col-12">
@@ -1810,11 +1815,12 @@
                         </button>
                       </div>
                       <div class="col-12 d-flex justify-content-center">
-                        <button type="button" class="btn btn-link" id="button-go-to-register">Nie masz konta? Zarejestruj
+                        <button type="button" class="btn btn-link" id="button-go-to-register">Nie masz konta?
+                          Zarejestruj
                           się</button>
                       </div>
                     </div>
-    
+
                   </form>
                 </div>
                 <div class="tab-pane fade" id="pills-buy-without-login" role="tabpanel"
@@ -1832,7 +1838,8 @@
                             Akceptuję regulamin serwisu</label>
                         </div>
                         <div class="form-check mb-3">
-                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option2" checked>
+                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option2"
+                            checked>
                           <label class="form-check-label" for="toggle-invoice-data">
                             Potrzebuję fakturę</label>
                         </div>
@@ -1867,7 +1874,7 @@
                         <button type="button" class="btn btn-primary btn-lg btn-block">Zapłać (55,00zł)</button>
                       </div>
                     </div>
-    
+
                   </form>
                 </div>
               </div>

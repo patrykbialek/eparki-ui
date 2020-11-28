@@ -438,11 +438,14 @@ html {
 .c-app-menu {
   display: none; }
 
-.c-app-header__logo-desktop {
-  display: none; }
-
 .c-app-header__logo-mobile {
   display: block; }
+
+.c-app-header__logo-desktop--t-default {
+  display: none; }
+
+.c-app-header__logo-desktop--t-contrast {
+  display: none; }
 
 .c-mobile-section-title {
   height: 48px;
@@ -467,10 +470,12 @@ html {
       margin-right: 8px; }
   .c-mobile-section-title {
     display: none; }
-  .c-app-header__logo-desktop {
-    display: block; }
-  .c-app-header__logo-mobile {
+  .c-app-header__logo-desktop--t-default {
+    display: block !important; }
+  .c-app-header__logo-desktop--t-contrast {
     display: none; }
+  .c-app-header__logo-mobile {
+    display: none !important; }
   .c-app-header-container__border-bottom {
     margin-right: 15px !important;
     margin-left: 15px !important; } }
@@ -1066,3 +1071,75 @@ html {
 
 .form-check-input {
   margin-top: 0; }
+
+.t-contrast * {
+  background-color: #000 !important;
+  color: #ffff00 !important; }
+
+.t-contrast .c-app-header .nav-link.active {
+  border: solid 1px #fff;
+  border-radius: 50px;
+  color: #fff !important; }
+
+.t-contrast .c-app-header__basket-total {
+  border: solid 1px #ffff00; }
+
+.t-contrast .c-ticket-item {
+  border: solid 1px #ffff00 !important;
+  border-radius: 4px; }
+  .t-contrast .c-ticket-item * {
+    background-color: transparent !important; }
+  .t-contrast .c-ticket-item__image {
+    background-color: #ffff00 !important;
+    border: solid 1px #ffff00; }
+  .t-contrast .c-ticket-item__actions .btn {
+    border: solid 1px #fff !important;
+    color: #fff !important; }
+
+.t-contrast .c-app-footer__icon {
+  background-color: #ffff00 !important;
+  border-radius: 50%; }
+  .t-contrast .c-app-footer__icon svg,
+  .t-contrast .c-app-footer__icon img {
+    background-color: #ffff00 !important; }
+
+.t-contrast .c-top-actions__more-less-trigger img,
+.t-contrast .c-filter-button__icon img,
+.t-contrast .c-filter-button__icon svg,
+.t-contrast .nav-link__icon img,
+.t-contrast .nav-link__icon svg {
+  background-color: #ffff00 !important;
+  border-radius: 50%; }
+
+.t-contrast .c-about-park__attractions-image img,
+.t-contrast .c-about-park__attractions-image {
+  background-color: #ffff00 !important; }
+
+.t-contrast .c-top-actions__filters-container .c-filter-button input:checked + label {
+  color: #fff !important;
+  border: solid 1px #fff !important; }
+
+.t-contrast .c-basket-summary--desktop * {
+  color: #fff !important; }
+  .t-contrast .c-basket-summary--desktop * .btn {
+    border: solid 1px #fff !important; }
+
+.t-contrast .c-about-park__future-events-date {
+  border: solid 1px #ffff00 !important; }
+
+.t-contrast .c-app-header__logo-desktop--t-default {
+  display: none !important; }
+
+.t-contrast .c-app-header__logo-desktop--t-contrast {
+  display: none !important; }
+
+.t-contrast .c-app-header__logo-mobile {
+  display: block !important; }
+
+@media (min-width: 990px) {
+  .t-contrast .c-app-header__logo-desktop--t-default {
+    display: none !important; }
+  .t-contrast .c-app-header__logo-desktop--t-contrast {
+    display: block !important; }
+  .t-contrast .c-app-header__logo-mobile {
+    display: none !important; } }

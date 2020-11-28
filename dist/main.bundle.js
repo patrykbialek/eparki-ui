@@ -153,6 +153,8 @@ var AppMenu = /*#__PURE__*/function () {
     _defineProperty(this, "invoiceDataContainer", document.querySelector("#invoice-data"));
 
     _defineProperty(this, "invoiceDataToggle", document.querySelector("#toggle-invoice-data"));
+
+    _defineProperty(this, "contrastToggle", document.querySelector('#contrast-theme-toggle'));
   }
 
   _createClass(AppMenu, [{
@@ -165,6 +167,7 @@ var AppMenu = /*#__PURE__*/function () {
       this.goToRegisterButton.addEventListener("click", this.goToRegister.bind(this));
       this.goToLoginButton.addEventListener("click", this.goToLogin.bind(this));
       this.invoiceDataToggle.addEventListener("click", this.toggleInvoiceData.bind(this));
+      this.contrastToggle.addEventListener("click", this.toggleContrastTheme.bind(this));
     }
   }, {
     key: "toggleInvoiceData",
@@ -266,6 +269,22 @@ var AppMenu = /*#__PURE__*/function () {
     value: function goToLogin() {
       this.registerForm.classList.add('is-hidden');
       this.loginForm.classList.remove('is-hidden');
+    }
+  }, {
+    key: "toggleContrastTheme",
+    value: function toggleContrastTheme(event) {
+      event.preventDefault();
+      var root = document.getElementsByTagName('html')[0];
+      var contrastClass = 't-contrast';
+      var contrastToggleCaption = document.querySelector('#contrast-theme-toggle-caption');
+
+      if (root.classList.contains(contrastClass)) {
+        root.classList.remove(contrastClass);
+        contrastToggleCaption.innerHTML = 'Werjsa kontrastowa';
+      } else {
+        root.classList.add(contrastClass);
+        contrastToggleCaption.innerHTML = 'Werjsa domyślna';
+      }
     }
   }]);
 

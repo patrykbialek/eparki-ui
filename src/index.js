@@ -27,6 +27,8 @@ export class AppMenu {
   invoiceDataContainer = document.querySelector("#invoice-data");
   invoiceDataToggle = document.querySelector("#toggle-invoice-data");
 
+  contrastToggle = document.querySelector('#contrast-theme-toggle');
+
   init() {
     this.ticketsButton.addEventListener("click", this.toggleMenu.bind(this));
     this.aboutButton.addEventListener("click", this.toggleMenu.bind(this));
@@ -37,6 +39,8 @@ export class AppMenu {
     this.goToLoginButton.addEventListener("click", this.goToLogin.bind(this));
 
     this.invoiceDataToggle.addEventListener("click", this.toggleInvoiceData.bind(this));
+
+    this.contrastToggle.addEventListener("click", this.toggleContrastTheme.bind(this));
   }
 
   toggleInvoiceData(){
@@ -145,6 +149,20 @@ export class AppMenu {
   goToLogin() {
     this.registerForm.classList.add('is-hidden');
     this.loginForm.classList.remove('is-hidden');
+  }
+
+  toggleContrastTheme(event) {
+    event.preventDefault();
+    const root = document.getElementsByTagName( 'html' )[0]
+    const contrastClass = 't-contrast';
+    const contrastToggleCaption = document.querySelector('#contrast-theme-toggle-caption');
+    if (root.classList.contains(contrastClass)) {
+      root.classList.remove(contrastClass);
+      contrastToggleCaption.innerHTML = 'Werjsa kontrastowa';
+    } else {
+      root.classList.add(contrastClass);
+      contrastToggleCaption.innerHTML = 'Werjsa domyślna';
+    }
   }
 }
 

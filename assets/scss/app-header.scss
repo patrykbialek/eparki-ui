@@ -40,12 +40,19 @@
   display: none;
 }
 
-.c-app-header__logo-desktop {
-  display: none;
-}
+// .c-app-header__logo-desktop {
+//   display: none;
+// }
 
 .c-app-header__logo-mobile {
   display: block;
+}
+
+.c-app-header__logo-desktop--t-default {
+  display: none;
+}
+.c-app-header__logo-desktop--t-contrast {
+  display: none;
 }
 
 .c-mobile-section-title {
@@ -80,12 +87,19 @@
     display: none;
   }
 
-  .c-app-header__logo-desktop {
-    display: block;
+  // .c-app-header__logo-desktop {
+  //   display: block!important;
+  // }
+
+  .c-app-header__logo-desktop--t-default {
+    display: block!important;
+  }
+  .c-app-header__logo-desktop--t-contrast {
+    display: none;
   }
 
   .c-app-header__logo-mobile {
-    display: none;
+    display: none!important;
   }
 
   .c-app-header-container__border-bottom {
