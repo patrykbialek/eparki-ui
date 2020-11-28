@@ -11,7 +11,6 @@ html {
   Custom styles
 */
 
-
 .c-custom-icon {
   background: #eee;
   display: inline-flex;
@@ -268,7 +267,7 @@ html {
 
   .c-top-actions {
     padding: 24px 0 0 0;
-  
+
     .nav button {
       width: 25%;
     }
@@ -336,7 +335,6 @@ html {
   border-radius: 4px;
 }
 
-
 .btn-primary {
   color: #fff;
   background-color: #537e37;
@@ -349,7 +347,9 @@ html {
   }
 }
 
-.btn-outline-secondary:not(:disabled):not(.disabled).active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .show>.btn-outline-secondary.dropdown-toggle {
+.btn-outline-secondary:not(:disabled):not(.disabled).active,
+.btn-outline-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-secondary.dropdown-toggle {
   color: #537e37;
   background-color: #fafafa;
   border-color: #537e37;
@@ -368,7 +368,7 @@ html {
     margin: 0;
     padding: 0;
   }
-  
+
   .modal-content {
     height: auto;
     min-height: 100%;
@@ -376,6 +376,14 @@ html {
   }
 }
 
+.modal-content {
+  background-color: #fafafa;
+}
+.modal-header,
+.modal-footer {
+  background-color: #eee;
+  // border: none;
+}
 
 @import "./map.scss";
 @import "./app-header.scss";
@@ -387,3 +395,4 @@ html {
 @import "./contact-form.scss";
 @import "./basket-summary.scss";
 @import "./profile.scss";
+@import "./basket.scss";

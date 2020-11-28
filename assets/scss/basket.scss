@@ -1,0 +1,100 @@
+.c-basket {
+  &__total {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 16px 0;
+  }
+  &__tickets {
+    &-header {
+      display: none;
+      border-bottom: solid 1px #424242;
+      padding: 12px 0;
+    }
+
+    &-list {
+      border-bottom: solid 1px #424242;
+
+      div:last-child {
+        border: none;
+      }
+    }
+
+    &-park-name {
+      display: flex;
+      align-items: center;
+      // margin-bottom: 24px;
+      &-caption {
+        margin-right: 24px;
+        font-style: italic;
+      }
+      &-decoration {
+        flex-shrink: 1;
+        flex-grow: 1;
+        align-items: center;
+        height: 2px;
+        border-bottom: solid 1px #c4c4c4;
+      }
+    }
+    &-item {
+      padding: 24px 0;
+      border-bottom: solid 1px #c4c4c4;
+
+      &-additional {
+        font-size: 14px;
+      }
+
+      &-on-desktop {
+        display: none !important;
+      }
+      &-on-mobile {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.modal {
+  &--full {
+    .modal-dialog {
+      max-width: 1140px;
+      max-height: 100%;
+      height: calc(100% - 24px);
+      width: calc(100% - 24px);
+      margin: 12px auto;
+    }
+    .modal-content {
+      height: 100%;
+    }
+    .modal-body {
+      overflow: auto;
+    }
+  }
+}
+
+.u-on-mobile {
+  display: none;
+}
+
+@media (min-width: 990px) {
+  .c-basket__tickets-header {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .c-basket__tickets-item-on-mobile {
+    display: flex !important;
+  }
+  .u-on-mobile {
+    display: block;
+  }
+  .u-on-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .c-basket__tickets-item-on-desktop {
+    display: block !important;
+  }
+}
