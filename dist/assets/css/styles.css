@@ -417,6 +417,23 @@ html {
     color: #424242; }
     .c-app-header .nav-link.active {
       color: #537e37; }
+  .c-app-header__basket {
+    position: relative; }
+    .c-app-header__basket-total {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: red;
+      color: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      font-size: 12px;
+      right: -8px;
+      top: -8px;
+      box-shadow: 0px 0px 3px #757575; }
 
 .c-app-menu {
   display: none; }
@@ -1042,3 +1059,10 @@ html {
 @media (min-width: 768px) {
   .c-basket__tickets-item-on-desktop {
     display: block !important; } }
+
+.form-check {
+  display: flex;
+  align-items: center; }
+
+.form-check-input {
+  margin-top: 0; }

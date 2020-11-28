@@ -98,3 +98,11 @@
     display: block !important;
   }
 }
+
+.form-check {
+  display: flex;
+  align-items: center;
+}
+.form-check-input {
+  margin-top: 0;
+}
