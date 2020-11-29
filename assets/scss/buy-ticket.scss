@@ -1,0 +1,97 @@
+.c-buy-ticket {
+  h2 {
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #424242;
+  }
+  &__tickets {
+    list-style-type: none;
+  }
+  &__detail {
+    border-radius: 4px;
+    position: relative;
+    // display: flex;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #fff;
+
+    padding: 12px 0;
+    margin-bottom: 16px;
+  }
+  &__total {
+    padding-top: 12px;
+    border-top: solid 1px #616161;
+  }
+  &__modal-footer {
+    background-color: transparent;
+    border-top: 0;
+  }
+  .is-active {
+    border: solid 1px #537e37;
+    box-shadow: 0 2px 3px -1px rgba(128, 103, 103, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  }
+  &__option-routes {
+    border: solid 1px #537e37;
+    border-radius: 4px;
+    padding: 12px;
+    height: 100%;
+    .list-group-item {
+      background-color: transparent;
+    }
+  }
+}
+.u-on-mobile {
+  .c-buy-ticket {
+    * {
+      font-size: 14px!important;
+    }
+    &__detail {
+      border-radius: 0;;
+      position: relative;
+      color: rgba(0, 0, 0, 0.87);
+      background-color: transparent;
+      box-shadow: none;
+      padding: 12px 0;
+      margin-bottom: 16px;
+      border-bottom: solid 1px #DDDDDD;
+
+    }
+  }
+  .is-active {
+    border: none;
+    box-shadow: none;
+  }
+  .input-group-prepend button,
+  .input-group-append button {
+    font-size: 22px;
+    padding: 0 12px;
+  }
+}
+
+.modal--full-width .modal-dialog {
+  max-width: 1140px;
+  max-height: 100%;
+  height: calc(100% - 24px);
+  width: calc(60% - 24px);
+  margin: 12px auto;
+}
+
+@media (max-width: 767px) {
+  .modal-header {
+    padding-bottom: 0;
+  }
+  .modal-title {
+    font-size: 16px;
+  }
+  .u-on-desktop {
+    display: none;
+  }
+  .modal--full-width .modal-dialog,
+  .modal--full .modal-dialog {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
