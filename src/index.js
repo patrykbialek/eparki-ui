@@ -27,7 +27,9 @@ export class AppMenu {
   invoiceDataContainer = document.querySelector("#invoice-data");
   invoiceDataToggle = document.querySelector("#toggle-invoice-data");
 
-  contrastToggle = document.querySelector('#contrast-theme-toggle');
+  contrastToggle = document.querySelector("#contrast-theme-toggle");
+
+  summaryToggle = document.querySelector("#summary-toggle");
 
   init() {
     this.ticketsButton.addEventListener("click", this.toggleMenu.bind(this));
@@ -35,19 +37,30 @@ export class AppMenu {
     this.contactButton[0].addEventListener("click", this.toggleMenu.bind(this));
     this.contactButton[1].addEventListener("click", this.toggleMenu.bind(this));
 
-    this.goToRegisterButton.addEventListener("click", this.goToRegister.bind(this));
+    this.goToRegisterButton.addEventListener(
+      "click",
+      this.goToRegister.bind(this)
+    );
     this.goToLoginButton.addEventListener("click", this.goToLogin.bind(this));
 
-    this.invoiceDataToggle.addEventListener("click", this.toggleInvoiceData.bind(this));
+    this.invoiceDataToggle.addEventListener(
+      "click",
+      this.toggleInvoiceData.bind(this)
+    );
 
-    this.contrastToggle.addEventListener("click", this.toggleContrastTheme.bind(this));
+    this.contrastToggle.addEventListener(
+      "click",
+      this.toggleContrastTheme.bind(this)
+    );
+
+    this.summaryToggle.addEventListener("click", this.toggleSummary.bind(this));
   }
 
-  toggleInvoiceData(){
-    if (this.invoiceDataContainer.classList.contains('is-hidden')) {
-      this.invoiceDataContainer.classList.remove('is-hidden');
+  toggleInvoiceData() {
+    if (this.invoiceDataContainer.classList.contains("is-hidden")) {
+      this.invoiceDataContainer.classList.remove("is-hidden");
     } else {
-      this.invoiceDataContainer.classList.add('is-hidden');
+      this.invoiceDataContainer.classList.add("is-hidden");
     }
   }
 
@@ -142,27 +155,47 @@ export class AppMenu {
   }
 
   goToRegister() {
-    this.loginForm.classList.add('is-hidden');
-    this.registerForm.classList.remove('is-hidden');
+    this.loginForm.classList.add("is-hidden");
+    this.registerForm.classList.remove("is-hidden");
   }
 
   goToLogin() {
-    this.registerForm.classList.add('is-hidden');
-    this.loginForm.classList.remove('is-hidden');
+    this.registerForm.classList.add("is-hidden");
+    this.loginForm.classList.remove("is-hidden");
   }
 
   toggleContrastTheme(event) {
     event.preventDefault();
-    const root = document.getElementsByTagName( 'html' )[0]
-    const contrastClass = 't-contrast';
-    const contrastToggleCaption = document.querySelector('#contrast-theme-toggle-caption');
+    const root = document.getElementsByTagName("html")[0];
+    const contrastClass = "t-contrast";
+    const contrastToggleCaption = document.querySelector(
+      "#contrast-theme-toggle-caption"
+    );
     if (root.classList.contains(contrastClass)) {
       root.classList.remove(contrastClass);
-      contrastToggleCaption.innerHTML = 'Werjsa kontrastowa';
+      contrastToggleCaption.innerHTML = "Werjsa kontrastowa";
     } else {
       root.classList.add(contrastClass);
-      contrastToggleCaption.innerHTML = 'Werjsa domyślna';
+      contrastToggleCaption.innerHTML = "Werjsa domyślna";
     }
+  }
+
+  toggleSummary(event) {
+    event.preventDefault();
+    const basketContainer = document.querySelector(
+      "#cashier-layout-basket-container"
+    );
+    basketContainer.style.transition = "transform 250ms ease-in";
+
+    if (basketContainer.style.transform === "translateY(164px)") {
+      basketContainer.style.transform = "translateY(0)";
+    } else {
+      basketContainer.style.transform = "translateY(164px)";
+    }
+
+    window.addEventListener("resize", () => {
+      basketContainer.style.transform = "translateY(0)";
+    });
   }
 }
 

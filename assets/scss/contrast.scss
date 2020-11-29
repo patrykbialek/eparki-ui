@@ -12,6 +12,9 @@
   .c-app-header__basket-total {
     border: solid 1px #ffff00;
   }
+  .c-summary-toggle__inside {
+    background-color: #ffff00 !important;
+  }
   .c-ticket-item {
     border: solid 1px #ffff00 !important;
     border-radius: 4px;
@@ -27,6 +30,14 @@
       color: #fff !important;
     }
   }
+  .btn.btn-outline-secondary {
+    border: solid 1px #fff;
+    img {
+      background-color: #ffff00 !important;
+      border-radius: 50%;
+      border: none;
+    }
+  }
   .c-app-footer__icon {
     background-color: #ffff00 !important;
     border-radius: 50%;
@@ -35,6 +46,11 @@
     img {
       background-color: #ffff00 !important;
     }
+  }
+
+  .c-profile-history__tickets-actions a,
+  .c-profile-history__tickets-actions a img {
+    background-color: #ffff00 !important;
   }
 
   .c-top-actions__more-less-trigger img,

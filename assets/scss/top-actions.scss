@@ -5,6 +5,9 @@
     height: 42px;
     overflow: hidden;
     transition: height 250ms ease-in;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     &.more {
       height: 104px;
       overflow: hidden;
@@ -48,7 +51,7 @@
         height: 24px;
       }
 
-      input {
+      input[type=checkbox] {
         position: absolute;
         left: 0;
         top: 0;
