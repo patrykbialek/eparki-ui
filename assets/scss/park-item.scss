@@ -1,0 +1,82 @@
+/* Park item */
+.c-park-item {
+  padding: 0 12px 0 0 !important;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fff;
+}
+
+.c-park-item__image {
+  width: 72px;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  padding-top: 32px;
+}
+
+.c-park-item__image img {
+  width: 48px;
+}
+
+.c-park-item__title {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-flex;
+  height: 56px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.c-park-item__attractions {
+  display: inline-flex;
+  align-items: center;
+  height: 52px;
+}
+.c-park-item__attraction img {
+  width: 18px !important;
+}
+
+.c-park-item__attraction {
+  background-color: #eee;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+
+.c-park-item__separator {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.c-park-item__actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 52px;
+}
+
+.c-park-item__footer {
+  height: 4px;
+}
+
+.c-park-item__border-bottom {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.c-park-item:hover {
+  box-shadow: 0 2px 3px -1px rgba(128, 103, 103, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}

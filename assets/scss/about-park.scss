@@ -31,8 +31,12 @@
     display: flex;
     align-content: center;
     justify-content: center;
-
+    align-items: center;
     margin-bottom: 8px;
+    
+    [class^="icon-"], [class*=" icon-"] {
+      font-size: 32px;
+    }
 
     img {
       width: 42px;
