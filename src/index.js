@@ -14,7 +14,7 @@ function toggleTopActionsFilters() {
   }
 }
 
-export class AppMenu {
+class AppMenu {
   ticketsButton = document.querySelector(".js-tickets");
   aboutButton = document.querySelector(".js-about");
   contactButton = document.querySelectorAll(".js-contact");
