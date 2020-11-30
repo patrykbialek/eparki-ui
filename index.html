@@ -32,11 +32,10 @@
 
   <!--// App header start -->
   <section class="c-app-header">
-
     <div class="container" id="page-content-wrapper">
       <div class="row mb-3">
         <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between u-width-100">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="" data-toggle="modal" data-target="#profileModal">
             <img src="assets/img/logo/logo_narwianski_horizontal_default.svg" alt="logo"
               class="c-app-header__logo-desktop c-app-header__logo-desktop--t-default" style="height: 50px;" />
             <img src="assets/img/logo/logo_narwianski_horizontal_contrast.svg" alt="logo"
@@ -1873,91 +1872,87 @@
               <div class="tab-content" id="pills-tabContent" style="height: 70vh; overflow: auto;">
                 <div class="tab-pane fade show" id="pills-my-data" role="tabpanel" aria-labelledby="pills-my-data-tab">
                   <form class="c-profile__form">
-                    <div class="row mb-2">
-                      <div class="col-12">
+                    <div class="d-flex flex-column mb-2">
+                      <div class="form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" class="form-control" id="name">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Adres e-mail</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                        <label class="form-check-label" for="toggle-invoice-data">
+                          Domyślne dane do faktury</label>
+                      </div>
+
+                      <div class="mt-2 is-hidden" id="invoice-data">
                         <div class="form-group">
-                          <label for="name">Imię i nazwisko</label>
+                          <label for="name">Nazwa firmy / Imię i nazwisko</label>
                           <input type="text" class="form-control" id="name">
                         </div>
                         <div class="form-group">
-                          <label for="email">Adres e-mail</label>
-                          <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
-                          <label class="form-check-label" for="toggle-invoice-data">
-                            Domyślne dane do faktury</label>
-                        </div>
-
-                        <div class="mt-2 is-hidden" id="invoice-data">
-                          <div class="form-group">
-                            <label for="name">Nazwa firmy / Imię i nazwisko</label>
-                            <input type="text" class="form-control" id="name">
-                          </div>
-                          <div class="form-group">
-                            <label for="email">Ulica, nr budynku, nr lokalu</label>
-                            <input type="text" class="form-control" id="address">
-                          </div>
-                          <div class="form-group">
-                            <label for="email">Kod pocztowy</label>
-                            <input type="text" class="form-control" id="postal-code">
-                          </div>
-                          <div class="form-group">
-                            <label for="email">Miejscowość</label>
-                            <input type="text" class="form-control" id="city">
-                          </div>
-                          <div class="form-group">
-                            <label for="email">NIP (opcjonalnie)</label>
-                            <input type="text" class="form-control" id="nip">
-                          </div>
-                        </div>
-
-                        <div class="mt-3 mb-3">
-                          <div class="dropdown-divider"></div>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="password">Obecne hasło</label>
-                          <div class="input-group mb-3">
-                            <input type="password" class="form-control" id="password">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button">
-                                <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
-                                <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
-                              </button>
-                            </div>
-                          </div>
+                          <label for="email">Ulica, nr budynku, nr lokalu</label>
+                          <input type="text" class="form-control" id="address">
                         </div>
                         <div class="form-group">
-                          <label for="password">Nowe hasło</label>
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="password" value="moje_haslo">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button">
-                                <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
-                                <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
-                              </button>
-                            </div>
-                          </div>
+                          <label for="email">Kod pocztowy</label>
+                          <input type="text" class="form-control" id="postal-code">
                         </div>
                         <div class="form-group">
-                          <label for="password">Powtórz nowe hasło</label>
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="password" value="moje_haslo">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button">
-                                <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
-                                <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
-                              </button>
-                            </div>
+                          <label for="email">Miejscowość</label>
+                          <input type="text" class="form-control" id="city">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">NIP (opcjonalnie)</label>
+                          <input type="text" class="form-control" id="nip">
+                        </div>
+                      </div>
+
+                      <div class="mt-3 mb-3">
+                        <div class="dropdown-divider"></div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password">Obecne hasło</label>
+                        <div class="input-group mb-3">
+                          <input type="password" class="form-control" id="password">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                              <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
+                              <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Nowe hasło</label>
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control" id="password" value="moje_haslo">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                              <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
+                              <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Powtórz nowe hasło</label>
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control" id="password" value="moje_haslo">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                              <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
+                              <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Zapisz zmiany</button>
-                      </div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary btn-lg btn-block">Zapisz zmiany</button>
                     </div>
                   </form>
                 </div>
@@ -1996,12 +1991,12 @@
                           Status: <span class="is-not-finished">Nieopłacone</span>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col-12 pt-3 pb-3">
+                      <div class="d-flex flex-column">
+                        <div class="pt-3 pb-3">
                           <button type="button" class="btn btn-primary btn-lg btn-block">
                             Przejdź do płatności (70,00 zł)</button>
                         </div>
-                        <div class="col-12 pt-3 pb-3">
+                        <div class="pt-3 pb-3">
                           <div class="c-profile-history__tickets-actions">
                             <a href="">
                               <span class="icon-delete"></span>
@@ -2051,12 +2046,12 @@
                           Status: <span class="is-finished">Opłacone</span>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col-12 pt-3 pb-3">
+                      <div class="d-flex flex-column">
+                        <div class="pt-3 pb-3">
                           <button type="button" class="btn btn-primary btn-lg btn-block">
                             Kup ponownie (70,00 zł)</button>
                         </div>
-                        <div class="col-12 pt-3 pb-3">
+                        <div class="pt-3 pb-3">
                           <div class="c-profile-history__tickets-actions">
                             <a href="">
                               <span class="icon-delete"></span>
@@ -2120,66 +2115,65 @@
                 <div class="tab-pane fade active show" id="pills-buy-login" role="tabpanel"
                   aria-labelledby="pills-buy-login-tab">
                   <form class="c-profile__form">
-                    <div class="row mb-2">
-                      <div class="col-12">
-                        <div class="form-group">
-                          <label for="email">Adres e-mail</label>
-                          <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                          <label for="password">Hasło</label>
-                          <div class="input-group mb-3">
-                            <input type="password" class="form-control" id="password">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button">
-                                <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
-                                <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
-                              </button>
-                            </div>
+                    <div class="d-flex flex-column mb-2">
+                      <div class="form-group">
+                        <label for="email">Adres e-mail</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Hasło</label>
+                        <div class="input-group mb-3">
+                          <input type="password" class="form-control" id="password">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                              <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
+                              <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
+                            </button>
                           </div>
                         </div>
-                        <div class="form-check mb-3">
-                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
-                          <label class="form-check-label" for="toggle-invoice-data">
-                            Akceptuję regulamin serwisu</label>
-                        </div>
-                        <div class="form-check mb-3">
-                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
-                          <label class="form-check-label" for="toggle-invoice-data">
-                            Potrzebuję fakturę</label>
-                        </div>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                        <label class="form-check-label" for="toggle-invoice-data">
+                          Akceptuję regulamin serwisu</label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                        <label class="form-check-label" for="toggle-invoice-data">
+                          Potrzebuję fakturę</label>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12 mb-3">
+                    <div class="d-flex flex-column">
+                      <div class="mb-3">
                         <button type="button" class="btn btn-primary btn-lg btn-block">Zaloguj</button>
                       </div>
-                      <div class="col-6 mb-3">
-                        <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-facebook">
-                          <img class="mr-2" src="assets/img/facebook_logo.png" alt="facebook_logo">
-                          <img src="assets/img/facebook_text.png" alt="facebook_text">
-                        </button>
+                      <div class="d-flex justify-content-center align-items-center">
+                        <div class="mb-3">
+                          <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-facebook">
+                            <img class="mr-2" src="assets/img/facebook_logo.png" alt="facebook_logo">
+                            <img src="assets/img/facebook_text.png" alt="facebook_text">
+                          </button>
+                        </div>
+                        <div class="mb-3">
+                          <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-google">
+                            <img class="mr-2" src="assets/img/google_logo.png" alt="google_logo">
+                            <img src="assets/img/google_text.png" alt="google_text">
+                          </button>
+                        </div>
                       </div>
-                      <div class="col-6 mb-3">
-                        <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-google">
-                          <img class="mr-2" src="assets/img/google_logo.png" alt="google_logo">
-                          <img src="assets/img/google_text.png" alt="google_text">
-                        </button>
-                      </div>
-                      <div class="col-12 d-flex justify-content-center">
+                      <div class="d-flex justify-content-center">
                         <button type="button" class="btn btn-link" id="button-go-to-register">Nie masz konta?
                           Zarejestruj
                           się</button>
                       </div>
                     </div>
-
                   </form>
                 </div>
                 <div class="tab-pane fade" id="pills-buy-without-login" role="tabpanel"
                   aria-labelledby="pills-my-history-tab">
                   <form class="c-profile__form">
-                    <div class="row mb-2">
-                      <div class="col-12">
+                    <div class="d-flex flex-column mb-2">
+                      <div>
                         <div class="form-group">
                           <label for="email">Adres e-mail</label>
                           <input type="email" class="form-control" id="email">
@@ -2220,9 +2214,7 @@
                         </div>
 
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 mb-3">
+                      <div class="mb-3">
                         <button type="button" class="btn btn-primary btn-lg btn-block">Zapłać (55,00zł)</button>
                       </div>
                     </div>
@@ -2918,6 +2910,7 @@
   </div>
   <!--// Ticket added modal end -->
 
+
   <!--// App footer -->
   <footer class="pb-5 c-app-footer">
     <div class="c-app-footer__border-top"> </div>
@@ -2995,6 +2988,8 @@
     </section>
   </footer>
   <!--// App footer end -->
+
+  
 </body>
 
 </html>
