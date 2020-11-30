@@ -1155,7 +1155,7 @@ a {
   box-shadow: none;
   padding: 12px 0;
   margin-bottom: 16px;
-  border-bottom: solid 1px #DDDDDD; }
+  border-bottom: solid 1px #dddddd; }
 
 .u-on-mobile .is-active {
   border: none;
@@ -1174,14 +1174,14 @@ a {
   margin: 12px auto; }
 
 @media (max-width: 767px) {
-  .modal-header {
+  .c-buy-ticket .modal-header {
     padding-bottom: 0; }
-  .modal-title {
+  .c-buy-ticket .modal-title {
     font-size: 16px; }
-  .u-on-desktop {
+  .c-buy-ticket .u-on-desktop {
     display: none; }
-  .modal--full-width .modal-dialog,
-  .modal--full .modal-dialog {
+  .c-buy-ticket .modal--full-width .modal-dialog,
+  .c-buy-ticket .modal--full .modal-dialog {
     margin: 0;
     width: 100%;
     height: 100%; } }
