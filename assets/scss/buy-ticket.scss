@@ -85,14 +85,14 @@
     .modal-title {
       font-size: 16px;
     }
-    .u-on-desktop {
-      display: none;
-    }
-    .modal--full-width .modal-dialog,
-    .modal--full .modal-dialog {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-    }
+  }
+  .u-on-desktop {
+    display: none;
+  }
+  .modal--full-width .modal-dialog,
+  .modal--full .modal-dialog {
+    margin: 0;
+    width: 100%;
+    height: 100%;
   }
 }
