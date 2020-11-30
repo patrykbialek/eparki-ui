@@ -663,6 +663,8 @@ a {
     justify-content: center;
     display: flex;
     padding-top: 32px; }
+  .c-ticket-item__details-container {
+    min-width: 200px; }
   .c-ticket-item__image {
     width: 42px;
     height: 42px;

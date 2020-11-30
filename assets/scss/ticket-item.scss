@@ -13,6 +13,9 @@
     display: flex;
     padding-top: 32px;
   }
+  &__details-container {
+    min-width: 200px;
+  }
   &__image {
     width: 42px;
     height: 42px;
